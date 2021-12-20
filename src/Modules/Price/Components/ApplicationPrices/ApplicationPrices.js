@@ -116,6 +116,7 @@ function ApplicationPrices() {
             their sources.
           </li>
         </ul>
+        <div></div>
       </Container>
     </div>
   );

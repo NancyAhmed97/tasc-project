@@ -7,7 +7,7 @@ function Login() {
     return (
         <div className='Login'>
            <Navbar activePage="login" />
-           <LoginForm />
+           {/* <LoginForm /> */}
         </div>
     )
 }
