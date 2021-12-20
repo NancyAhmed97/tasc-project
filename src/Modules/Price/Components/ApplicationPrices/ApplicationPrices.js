@@ -116,7 +116,9 @@ function ApplicationPrices() {
             their sources.
           </li>
         </ul>
-        <div></div>
+        <div className="button">
+            <button>Contact our expert</button>
+        </div>
       </Container>
     </div>
   );

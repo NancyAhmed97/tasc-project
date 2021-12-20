@@ -87,6 +87,21 @@ table {
     font-family: "Open Sans";
     opacity: 0.67;
 }
+.ApplicationPrices .button{
+    text-align: center;
+}
+.ApplicationPrices button
+{
+    height: 50px;
+    width: 224px;
+    background-color: #426B87;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    font-family: 'Poppins';
+    margin-bottom: 95px;
+
+}
 @media only screen and (max-width: 768px) {
     table tr td
     {
