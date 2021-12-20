@@ -32,7 +32,7 @@ table {
   }
   table tr td
   {
-    font-size: 12px;
+    font-size: 18px;
         font-weight: 400;
     font-family: "Gotham";
     color: #426B87;
@@ -86,4 +86,25 @@ table {
     font-size: 14px;
     font-family: "Open Sans";
     opacity: 0.67;
+}
+@media only screen and (max-width: 768px) {
+    table tr td
+    {
+      font-size: 12px;
+          font-weight: 400;
+      font-family: "Gotham";
+      color: #426B87;
+    }
+
+
+}
+@media  (min-width: 768px) and (max-width: 991px) {
+    table tr td
+    {
+      font-size: 12px;
+          font-weight: 400;
+      font-family: "Gotham";
+      color: #426B87;
+    }
+   
 }
