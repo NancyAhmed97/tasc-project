@@ -122,11 +122,13 @@ font-size: 16px;
 opacity: 67%;
 } */
 @media only screen and (max-width: 768px) {
-    .TascCompanyInformation .pragraph p:last-of-type{
+    /* .TascCompanyInformation .pragraph p:last-of-type{
         padding-right: 20px;
-    }
+    } */
     .TascCompanyInformation .pragraph p:first-of-type{
         padding-right: 20px;
+        display: flex;
+        flex-direction: column;
     }
 
     .TascCompanyInformation
@@ -137,10 +139,6 @@ opacity: 67%;
    
     padding-right: 0px;
     padding-left: 15px;
-
-  
-
-    
     }
     .TascCompanyInformation .ul p:last-of-type{
 
@@ -156,16 +154,18 @@ opacity: 67%;
     margin-left: 100px;
     
     }
-/* .TascCompanyInformation .pragraph::before{
-  
-    margin-bottom: 290px;
- 
-    
-}
-.TascCompanyInformation .pragraph p:last-of-type{
-    margin-top: 15px;
- 
-    } */
+    .TascCompanyInformation .pragraph p:last-of-type{
+        list-style:none;
+        padding-left: 0;
+        margin-left: 0;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 16px;
+        color: #000000;
+        opacity: 0.67;
+        margin-top: 40px;
+        margin-bottom: 55px;
+        padding-right: 0;
+        }
 }
 @media  (min-width: 768px) and (max-width: 991px) {
     .TascCompanyInformation
