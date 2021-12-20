@@ -1,0 +1,101 @@
+.GeneralManager
+{
+    padding: 80px 0 0px 73px;
+}
+.GeneralManager ul{
+    display: flex;
+    flex-direction: row;
+  
+}
+.GeneralManager .GeneralManagerImg {
+    height: 569px;
+width: 608px;
+position: relative;
+top: 28px;
+}
+.GeneralManager ul li
+
+{
+list-style: url("../../../../Resources/Assets/checklistIcon.svg");
+font-family: 'Poppins', sans-serif;
+font-size: 16px;
+opacity: 0.67;
+padding-left: 16px;
+margin-left: -16px;
+padding-left: 9px;
+}
+.GeneralManager ul li:first-of-type
+
+{
+width: 315px;
+}
+.GeneralManager ul div:first-of-type li:last-of-type
+
+{
+width: 300px;
+margin-top: 30px;
+}
+.GeneralManager ul div:first-of-type 
+
+{
+margin-right: 116px;
+}
+
+@media only screen and (max-width: 768px) {
+    .GeneralManager
+    {
+        padding: 0 45px 50px 15px;
+    }
+    .GeneralManager ul li
+
+    {
+
+    padding-left: 0px;
+    }
+    .GeneralManager ul{
+        display: flex;
+        flex-direction: column;
+    }
+    .GeneralManager ul div:first-of-type li:last-of-type
+
+{
+margin-bottom: 30px;
+}
+.GeneralManager ul li:first-of-type
+
+{
+width: 300px;
+margin-bottom: 25px;
+}
+.GeneralManager .GeneralManagerImg {
+    height: 500px;
+
+}
+}
+@media  (min-width: 768px) and (max-width: 991px) {
+    .GeneralManager
+    {
+        padding: 80px 0 0px 0px;
+    }
+    .GeneralManager ul li
+
+    {
+
+    padding-left: 0px;
+    }
+    .GeneralManager ul{
+        display: flex;
+        flex-direction: column;
+    }
+    .GeneralManager ul div:first-of-type li:last-of-type
+
+{
+margin-bottom: 30px;
+}
+.GeneralManager ul li:first-of-type
+
+{
+width: 300px;
+margin-bottom: 25px;
+}
+}
