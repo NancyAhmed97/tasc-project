@@ -7,6 +7,7 @@ import Pricing from "./Modules/Price/Pricing";
 import Contactus from "./Modules/Contactus/Contactus";
 // import Login from "./Modules/Login/Login";
 import Meeting from "./Modules/Meeting/Meeting";
+import Confirmyourdetails from "./Modules/Meeting/Components/Confirmyourdetails/Confirmyourdetails";
 // import { Redirect } from "react-router-dom";
 // import { useSelector } from "react-redux";
 
@@ -24,6 +25,7 @@ function Routes() {
           <Route path="/contactus" render={() => <Contactus />} />
           {/* <Route path="/login" render={() => <Login />} /> */}
           <Route path="/meeting" render={() => <Meeting />} />
+          <Route path="/Confirmyourdetails" render={() => <Confirmyourdetails />} />
         </Switch>
       )}
     />
