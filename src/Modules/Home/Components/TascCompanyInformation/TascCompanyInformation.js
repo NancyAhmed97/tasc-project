@@ -12,7 +12,7 @@ function TascCompanyInformation() {
               <h1>Tasc Company Information</h1>
               <p>About us</p>
             </div>
-            <div className="pragraph">
+          <div className="pragraph">
               <p>
                 Established in the year 1990, ASCON developed and implemented
                 specialized ERP software solutions and offers consultation

@@ -1,0 +1,57 @@
+.sdp {
+  width: 100%;
+  box-shadow: none;
+}
+.sdp:focus
+{
+  box-shadow: none;
+}
+.sdp--month-picker button:first-of-type {
+  position: absolute;
+  right: 42%;
+
+}
+.sdp--month-picker p{
+font-size: 16px;
+font-family: 'Poppins';
+font-weight: bold;
+}
+.sdp--date-btn__selected{
+    background-color: #426B87;
+    border-radius: 4px;
+    width: 67px;
+    color: #fff !important;
+    height: 27px;
+}
+.sdp--square-btn{
+    color: #A9A9A9;
+} 
+.sdp--text__inactive
+{
+    color: #DCDCDC;
+}
+.ScheduleCalender p{
+  opacity: 0.67;
+  font-size: 14px;
+  font-family: "Open Sans";
+color: #000000;}
+.ScheduleCalender p span{
+  opacity: 0.67;
+  font-size: 14px;
+  font-family: "Open Sans";
+  font-weight: bold;
+  color: #000000;
+}
+@media only screen and (max-width: 768px) {
+  .sdp--month-picker button:first-of-type {
+    position: absolute;
+    right: 20%;
+  }
+}
+
+@media  (min-width: 768px) and (max-width: 991px) {
+  .sdp--month-picker button:first-of-type {
+    position: absolute;
+    right: 20%;
+  }
+}

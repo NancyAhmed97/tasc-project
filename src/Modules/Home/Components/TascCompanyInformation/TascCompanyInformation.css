@@ -20,15 +20,11 @@
 }
 .TascCompanyInformation .pragraph p:first-of-type:before{
     content: url("../../../../Resources/Assets/Path 10921.svg");
-/* padding-left: 56px; */
 display: inline-block;
-/* margin-left: 40px; */
 font-family: 'Open Sans', sans-serif;
 font-size: 16px;
 color: #000000;
-/* opacity: 0.67; */
 padding-right: 40px;
-/* opacity: 0.1 !important; */
 
 }
 .TascCompanyInformation .pragraph p:first-of-type{

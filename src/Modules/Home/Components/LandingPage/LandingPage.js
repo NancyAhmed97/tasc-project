@@ -29,7 +29,7 @@ function LandingPage() {
             <Col md={12} xs={12}>
               <div className="landingpage-btn">
                 <button className="contact-btn px-3 py-2 " >
-                  <Link to="/contactus">Contact our expert</Link>
+                  <Link to="/meeting">Contact our expert</Link>
                 </button>
                 <button className="aboutus-btn px-4 py-2">
                 <Link to="/aboutus">About us</Link>

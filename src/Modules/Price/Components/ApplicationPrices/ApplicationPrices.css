@@ -1,125 +1,111 @@
-
-.ApplicationPrices .title h2{
-	font-family: "Gotham";
-    font-size: 35px;
-    font-weight: bold;
-    color: #426B87;
-
+.ApplicationPrices .title h2 {
+  font-family: "Gotham";
+  font-size: 35px;
+  font-weight: bold;
+  color: #426b87;
 }
 table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-    text-align: center;
-    margin-bottom: 51px;
-  }
-  table tr th p:first-of-type
-  {
-    font-family: "Gotham";
-    font-size: 16px;
-    font-weight: 400;
-   padding: 0;
-   margin: 0;
-  }
-  table tr th p:last-of-type
-  {
-    font-family: "Gotham";
-    font-size: 28px;
-    font-weight: bold;
-   color: #426B87;
-   padding: 0;
-   margin: 0;
-  }
-  table tr td
-  {
-    font-size: 18px;
-        font-weight: 400;
-    font-family: "Gotham";
-    color: #426B87;
-  }
-  th:first-of-type{
-  border:none;
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
   text-align: center;
-
-  }
-  td, th {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
-    text-align: center;
-
-  }
-  table tr td:first-of-type
-  {
-      text-align: left;
- 
-  }
-  tr:nth-child(even) {
-  
-    border-right:1px solid #EBEFFC;
-    background:#F9FBFD;
-    text-align: center;
-
-  }
-  tr:nth-child(odd) td:first-of-type{
-  
-    border-left:none !important;
-  }
-  .ApplicationPrices ul{
-      margin-bottom: 70px;
-  }
-  .ApplicationPrices ul li{
-      list-style:url("../../../../Resources/Assets/doubleStar.svg");
-      font-size: 14px;
-      font-family: "Open Sans";
-      opacity: 0.67;
-      padding-left: 20px;
-  }
-  .ApplicationPrices ul li:first-of-type{
-    list-style:url("../../../../Resources/Assets/star.svg");
-    font-size: 14px;
-    font-family: "Open Sans";
-    opacity: 0.67;
+  margin-bottom: 51px;
 }
-  .ApplicationPrices ul li:last-of-type{
-    list-style:url("../../../../Resources/Assets/asset1.svg");
-    font-size: 14px;
-    font-family: "Open Sans";
-    opacity: 0.67;
+table tr th p:first-of-type {
+  font-family: "Gotham";
+  font-size: 16px;
+  font-weight: 400;
+  padding: 0;
+  margin: 0;
 }
-.ApplicationPrices .button{
-    text-align: center;
+table tr th p:last-of-type {
+  font-family: "Gotham";
+  font-size: 28px;
+  font-weight: bold;
+  color: #426b87;
+  padding: 0;
+  margin: 0;
 }
-.ApplicationPrices button
-{
-    height: 50px;
-    width: 224px;
-    background-color: #426B87;
-    border: none;
-    color: #fff;
-    font-size: 16px;
-    font-family: 'Poppins';
-    margin-bottom: 95px;
+table tr td {
+  font-size: 18px;
+  font-weight: 400;
+  font-family: "Gotham";
+  color: #426b87;
+}
+th:first-of-type {
+  border: none;
+  text-align: center;
+}
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  text-align: center;
+}
+table tr td:first-of-type {
+  text-align: left;
+}
+tr:nth-child(even) {
+  border-right: 1px solid #ebeffc;
+  background: #f9fbfd;
+  text-align: center;
+}
+tr:nth-child(odd) td:first-of-type {
+  border-left: none !important;
+}
+.ApplicationPrices ul {
+  margin-bottom: 70px;
+}
+.ApplicationPrices ul li {
+  list-style: url("../../../../Resources/Assets/doubleStar.svg");
+  font-size: 14px;
+  font-family: "Open Sans";
+  opacity: 0.67;
+  padding-left: 20px;
+}
+.ApplicationPrices ul li:first-of-type {
+  list-style: url("../../../../Resources/Assets/star.svg");
+  font-size: 14px;
+  font-family: "Open Sans";
+  opacity: 0.67;
+}
+.ApplicationPrices ul li:last-of-type {
+  list-style: url("../../../../Resources/Assets/asset1.svg");
+  font-size: 14px;
+  font-family: "Open Sans";
+  opacity: 0.67;
+}
+.ApplicationPrices .button {
+  text-align: center;
+}
+.ApplicationPrices button {
+  height: 50px;
+  width: 224px;
+  background-color: #426b87;
+  border: none;
 
+  margin-bottom: 95px;
+}
+.ApplicationPrices .button a {
+  font-size: 16px;
+  font-family: "Poppins";
+  color: #fff;
+  text-decoration: none;
 }
 @media only screen and (max-width: 768px) {
-    table tr td
-    {
-      font-size: 12px;
-          font-weight: 400;
-      font-family: "Gotham";
-      color: #426B87;
-    }
-
-
+  table tr td {
+    font-size: 12px;
+    font-weight: 400;
+    font-family: "Gotham";
+    color: #426b87;
+  }
 }
-@media  (min-width: 768px) and (max-width: 991px) {
-    table tr td
-    {
-      font-size: 12px;
-          font-weight: 400;
-      font-family: "Gotham";
-      color: #426B87;
-    }
-   
+@media (min-width: 768px) and (max-width: 991px) {
+  table tr td {
+    font-size: 12px;
+    font-weight: 400;
+    font-family: "Gotham";
+    color: #426b87;
+  }
 }

@@ -3,6 +3,7 @@ import { Container } from "react-bootstrap";
 import Wrong from "../../../../Resources/Assets/Union 7.svg";
 import right from "../../../../Resources/Assets/Icon awesome-check.svg";
 import "./ApplicationPrices.css";
+import { Link } from "react-router-dom";
 function ApplicationPrices() {
   return (
     <div className="ApplicationPrices">
@@ -117,7 +118,9 @@ function ApplicationPrices() {
           </li>
         </ul>
         <div className="button">
-            <button>Contact our expert</button>
+            <button>
+              <Link to="/meeting">Contact our expert</Link>
+            </button>
         </div>
       </Container>
     </div>

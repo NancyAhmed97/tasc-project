@@ -9,7 +9,7 @@ function Home() {
   return (
     <div>
       <Navbar activePage="About us"/>
-      <LandingSection activePage="About us" />
+    <LandingSection activePage="About us" />
     <TascCompanyInformation />
     <AdvancedFeatures />
       <Footer activeState="about" />

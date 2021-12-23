@@ -5,7 +5,8 @@ import About from "./Modules/About/About";
 import Blog from "./Modules/Blog/Blog";
 import Pricing from "./Modules/Price/Pricing";
 import Contactus from "./Modules/Contactus/Contactus";
-import Login from "./Modules/Login/Login";
+// import Login from "./Modules/Login/Login";
+import Meeting from "./Modules/Meeting/Meeting";
 // import { Redirect } from "react-router-dom";
 // import { useSelector } from "react-redux";
 
@@ -21,7 +22,8 @@ function Routes() {
           <Route path="/blog" render={() => <Blog />} />
           <Route path="/pricing" render={() => <Pricing />} />
           <Route path="/contactus" render={() => <Contactus />} />
-          <Route path="/login" render={() => <Login />} />
+          {/* <Route path="/login" render={() => <Login />} /> */}
+          <Route path="/meeting" render={() => <Meeting />} />
         </Switch>
       )}
     />
