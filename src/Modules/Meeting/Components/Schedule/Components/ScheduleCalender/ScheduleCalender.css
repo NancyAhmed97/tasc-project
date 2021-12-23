@@ -1,5 +1,5 @@
 .sdp {
-  width: 640px;
+  width:100% !important;
   box-shadow: none !important;
 }
 .sdp:focus
@@ -8,11 +8,11 @@
 }
 .sdp--month-picker button:first-of-type {
   position: absolute;
-  right: 50%;
+  right: 43%;
 }
 .sdp--month-picker button:last-of-type {
   position: absolute;
-  right: 47%;
+  right: 40%;
 }
 .sdp--dates-grid{
   height: 240px;
@@ -58,10 +58,7 @@ color: #000000;}
     position: absolute;
     right: 11%;
   }
-  .sdp {
-    width: 370px;
-    box-shadow: none !important;
-  }
+
 }
 
 @media  (min-width: 768px) and (max-width: 991px) {
@@ -73,8 +70,5 @@ color: #000000;}
     position: absolute;
     right: 42%;
   }
-  .sdp {
-    width: 418px;
-    box-shadow: none !important;
-  }
+
 }
