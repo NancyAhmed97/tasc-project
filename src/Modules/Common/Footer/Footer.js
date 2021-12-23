@@ -68,11 +68,11 @@ function Footer({activeState}) {
                       About us
                     </Link>
                   </li>
-                  <li className={activeState==="home"?"active text-white mt-3":"text-white mt-3"}>
+                  {/* <li className={activeState==="home"?"active text-white mt-3":"text-white mt-3"}>
                     <Link to="/services" className={activeState==="home"?"text-white ":"text-white px-3"}>
                     Services
                                         </Link>
-                  </li>
+                  </li> */}
                   <li className={activeState==="blog"?"active text-white mt-3":"text-white mt-3"}>
                     <Link to="/blog" className={activeState==="blog"?"text-white ":"text-white px-3"}>
                       Blog
