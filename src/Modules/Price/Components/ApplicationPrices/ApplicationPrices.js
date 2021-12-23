@@ -12,7 +12,8 @@ function ApplicationPrices() {
           <h2 className="py-5">Application Prices</h2>
         </div>
 
-        <table>
+     <div>
+     <table>
           <tr>
             <th></th>
             <th>
@@ -109,6 +110,7 @@ function ApplicationPrices() {
             <td>Any integration needed</td>
           </tr>
         </table>
+     </div>
         <ul>
           <li>The system monitors the entire supply process.</li>
           <li>Makes sure that the medicines are “not adulterated”.</li>

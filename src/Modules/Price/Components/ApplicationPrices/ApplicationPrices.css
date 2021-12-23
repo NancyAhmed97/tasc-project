@@ -94,6 +94,11 @@ tr:nth-child(odd) td:first-of-type {
   text-decoration: none;
 }
 @media only screen and (max-width: 768px) {
+  table {
+    width: 100%;
+    table-layout: fixed;
+    overflow-wrap: break-word;
+  }
   table tr td {
     font-size: 12px;
     font-weight: 400;
@@ -102,6 +107,11 @@ tr:nth-child(odd) td:first-of-type {
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
+  table {
+    width: 100%;
+    table-layout: fixed;
+    overflow-wrap: break-word;
+  }
   table tr td {
     font-size: 12px;
     font-weight: 400;
