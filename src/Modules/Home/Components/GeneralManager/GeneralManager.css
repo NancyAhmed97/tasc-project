@@ -1,5 +1,5 @@
 .GeneralManager {
-  padding: 80px 0 0px 73px;
+  padding: 0px 0 0px 73px;
 }
 .GeneralManager ul {
   display: flex;
@@ -28,7 +28,7 @@
   margin-top: 30px;
 }
 .GeneralManager ul div:first-of-type {
-  margin-right: 116px;
+  margin-right: 75px;
 }
 
 @media only screen and (max-width: 768px) {

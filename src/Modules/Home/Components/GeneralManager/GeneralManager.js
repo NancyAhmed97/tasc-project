@@ -9,7 +9,7 @@ function GeneralManager() {
       <Container fluid>
         
         <Row>
-          <Col md={7} xs={12} className="pt-5 mt-4">
+          <Col md={6} xs={12} className="pt-5 mt-4">
           <Title title="General Manager" />
 
             <ul>
@@ -22,7 +22,7 @@ function GeneralManager() {
               </div>
             </ul>
           </Col>
-          <Col md={5} xs={12} className="p-0">
+          <Col md={6} xs={12} className="p-0">
             <img
               src={GeneralManagerImg}
               alt="GeneralManagerImg"
