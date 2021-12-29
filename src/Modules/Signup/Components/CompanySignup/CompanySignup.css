@@ -1,89 +1,96 @@
 .CompanySignupContainer {
+  height: 518.63px;
+  width: 930px;
+  margin-left: 90px;
+}
+.CompanySignup .img-container {
+  background-image: url("../../../../Resources/Assets/Group 6026.png");
+  background-repeat: no-repeat;
+  height: 100%;
+}
+.CompanySignup .formContainer {
+  background-color: #fff;
+  padding: 50px 36px;
+  box-shadow: 5px 10px 8px 10px #ebeffc;
+  position: relative;
+}
+.CompanySignup h4 {
+  font-size: 19px;
+  font-weight: bold;
+  font-family: "Open Sans", sans-serif;
+  margin-bottom: 12px;
+}
+.CompanySignup p {
+  color: #757575;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Open Sans", sans-serif;
+  margin-bottom: 30px;
+}
+.CompanySignup ::placeholder {
+  color: #426b87;
+  font-size: 12;
+  font-weight: 400;
+  font-family: "Poppins";
+  opacity: 1;
+}
+
+.CompanySignup :-ms-input-placeholder {
+  color: #426b87;
+  font-size: 12;
+  font-weight: 400;
+  font-family: "Poppins";
+  opacity: 1;
+}
+
+.CompanySignup ::-ms-input-placeholder {
+  color: #426b87;
+  font-size: 12;
+  font-weight: 400;
+  font-family: "Poppins";
+}
+.CompanySignup label {
+  color: #757575;
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+}
+.CompanySignup a {
+  color: #426b87;
+  font-size: 12px;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.CompanySignup .forgetPass {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 25px;
+}
+.CompanySignup .passSeen {
+  position: absolute;
+  left: 85%;
+  bottom: 190px;
+  /* bottom: 25%; */
+}
+.CompanySignup button {
+  width: 148px;
+  height: 37px;
+  background-color: #426b87;
+  color: #fff;
+  border: none;
+}
+.CompanySignup #password,
+.CompanySignup #userName {
+  padding-left: 13px;
+  padding-top: 5px;
+  padding-bottom: 22px;
+}
+@media only screen and (max-width: 768px) {
+  .CompanySignupContainer {
     height: 518.63px;
-    width: 930px;
-    margin-left: 90px;
+    width: 100%;
+    margin-left: 0px;
+    margin-top: 25px;
   }
-  .CompanySignup .img-container {
-    background-image: url("../../../../Resources/Assets/Group 6026.png");
-    background-repeat: no-repeat;
-    height: 100%;
-  }
-  .CompanySignup .formContainer {
-    background-color: #fff;
-    padding: 50px 36px;
-    box-shadow: 5px 10px 8px 10px #ebeffc;
-    position: relative;
-  }
-  .CompanySignup h4 {
-    font-size: 19px;
-    font-weight: bold;
-    font-family: "Open Sans", sans-serif;
-    margin-bottom: 12px;
-  }
-  .CompanySignup p {
-    color: #757575;
-    font-size: 14px;
-    font-weight: 400;
-    font-family: "Open Sans", sans-serif;
-    margin-bottom: 30px;
-  }
-  .CompanySignup ::placeholder {
-    color: #426b87;
-    font-size: 12;
-    font-weight: 400;
-    font-family: "Poppins";
-    opacity: 1;
-  }
-  
-  .CompanySignup :-ms-input-placeholder {
-    color: #426b87;
-    font-size: 12;
-    font-weight: 400;
-    font-family: "Poppins";
-    opacity: 1;
-  }
-  
-  .CompanySignup ::-ms-input-placeholder {
-    color: #426b87;
-    font-size: 12;
-    font-weight: 400;
-    font-family: "Poppins";
-  }
-  .CompanySignup label {
-    color: #757575;
-    font-family: "Open Sans", sans-serif;
-    font-size: 12px;
-    font-weight: 400;
-  }
-  .CompanySignup a {
-    color: #426b87;
-    font-size: 12px;
-    font-weight: 400;
-    text-decoration: none;
-  }
-  
-  .CompanySignup .forgetPass {
-    display: flex;
-    justify-content: flex-end;
-    padding-right: 25px;
-  }
-  .CompanySignup .passSeen {
-    position: absolute;
-    left: 85%;
-    bottom: 190px;
-    /* bottom: 25%; */
-  }
-  .CompanySignup button {
-    width: 148px;
-    height: 37px;
-    background-color: #426b87;
-    color: #fff;
-    border: none;
-  }
-  .CompanySignup #password,
-  .CompanySignup #userName {
-      padding-left: 13px;
-      padding-top: 5px;
-      padding-bottom: 22px;
-  }
-  
+}
