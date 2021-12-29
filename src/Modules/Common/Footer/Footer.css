@@ -70,8 +70,7 @@ margin-right: 0.5rem;
 	display: flex;
 	justify-content: space-between;
 	margin-top: 15px;
-	margin-bottom: 15px;
-}
+	margin-bottom: 23px;}
 .footer .dropdown-toggle img
 {
 margin-right: 5px;
@@ -95,6 +94,8 @@ cursor: pointer;
 	color: #fff;
 	opacity: 0.69;
 	margin-top: 4.6rem;
+	position: relative;
+bottom: 38px;
 
 	
 }
@@ -104,7 +105,7 @@ cursor: pointer;
 .footer .social-medoiaCol{
 	position: absolute;
 	right: 0px;
-	top: 52px;
+	top: 11px;
 }
 
 
