@@ -10,6 +10,7 @@ import { Link } from "react-router-dom";
 
 function Navbarr({activeState,activePage}) {
   console.log(activePage);
+  console.log(activePage);
   return (
 
 
@@ -24,20 +25,20 @@ function Navbarr({activeState,activePage}) {
      
       
           <Nav className="m-auto nav-links">
-            <Link to="/"  className={activeState==="home"?"active text-white mx-3 ":(activePage?"lightLink mx-3":"text-white mx-3 ")}>
+            <Link to="/"  className={activeState==="home"?"homeActive text-white mx-3 ":(activePage?"lightLink mx-3":"text-white mx-3 ")}>
               Home
             </Link>
-            <Link to="/aboutus"  className={activeState==="about"?"active text-white mx-3 ":(activePage?"lightLink mx-3":"text-white mx-3 ")}>
+            <Link to="/aboutus"  className={activePage==="About us"?"active mx-3 ":(activePage?"lightLink mx-3":"text-white mx-3 ")}>
               About us
             </Link>
-            <Link to="/blog" className={activeState==="blog"?"active text-white mx-3 ":(activePage?"lightLink mx-3":"text-white mx-3 ")}>
+            <Link to="/blog" className={activePage==="Blog"?"active  mx-3 ":(activePage?"lightLink mx-3":"text-white mx-3 ")}>
               Blog
             </Link>
 
-            <Link to="/pricing" className={activeState==="pricing"?"active text-white mx-3 ":(activePage?"lightLink mx-3":"text-white mx-3 ")}>
+            <Link to="/pricing" className={activePage==="Pricing plans"?"active  mx-3 ":(activePage?"lightLink mx-3":"text-white mx-3 ")}>
               Pricing
             </Link>
-            <Link to="/contactus" className={activeState==="contact"?"active text-white mx-3 ":(activePage?"lightLink mx-3":"text-white mx-3 ")}>
+            <Link to="/contactus" className={activePage==="Contact us"?"active  mx-3 ":(activePage?"lightLink mx-3":"text-white mx-3 ")}>
               Contact us
             </Link>
           </Nav>
