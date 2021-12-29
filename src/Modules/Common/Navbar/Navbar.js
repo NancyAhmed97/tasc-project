@@ -16,10 +16,13 @@ function Navbarr({activeState,activePage}) {
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" className={activePage?"lightNavbar":"navbar "}>
       <Container>
         <Navbar.Brand href="/"> <img src={activePage?LightLogo:logo} alt="logo-img" /></Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
-          {activePage !=="login"?
+        {activePage !=="login"?
           <>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        
+        <Navbar.Collapse id="responsive-navbar-nav">
+     
+      
           <Nav className="m-auto nav-links">
             <Link to="/"  className={activeState==="home"?"active text-white mx-3 ":(activePage?"lightLink mx-3":"text-white mx-3 ")}>
               Home
@@ -46,6 +49,7 @@ function Navbarr({activeState,activePage}) {
               </Link>
             </div>
           </Nav>
+          </Navbar.Collapse>
           </>
           :
       <>
@@ -79,7 +83,6 @@ function Navbarr({activeState,activePage}) {
       </>
 
           }
-        </Navbar.Collapse>
       </Container>
     </Navbar>
   );
