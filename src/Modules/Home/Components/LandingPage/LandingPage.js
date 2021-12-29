@@ -1,18 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import AOS from "aos"; 
+import "aos/dist/aos.css"
 import Navbar from "../../../Common/Navbar/Navbar";
 import "./LandingPage.css";
 function LandingPage() {
+useEffect(() => {
+  AOS.init();
+}, [])
   return (
     <>
       <div className="landingPage">
         <Navbar  activeState="home"/>
         <Container>
           <Row>
-        <div className="landinpage-content">
+        <div className="landinpage-content " data-aos="fade-right">
         <Col md={12} xs={12}>
-              <div className="landinpage-text mb-5 w-50">
+              <div className="landinpage-text mb-5 w-50 "   >
                 <p className="text-white  light">
                   All the best for your business.
                 </p>
