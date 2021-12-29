@@ -1,0 +1,80 @@
+.TascActivity {
+  background-image: url("../../../../Resources/Assets/Group 6493.png");
+  background-attachment: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* width: 1286px !important; */
+  background-position-x: right;
+  margin-left: 118px;
+  height: 610px;
+  /* height: fit-content; */
+}
+.TascActivity .activityContent
+{
+    position: absolute;
+    top: 115px;
+    left: 50px;
+
+}
+.TascActivity .activityContent h2 {
+  font-family: "Poppins";
+  font-size: 30;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 40px;
+}
+.TascActivity .activityContent p:first-of-type {
+  font-family: "Poppins";
+  font-size: 18;
+  color: #4eaee5;
+  margin-bottom: 24px;
+}
+.TascActivity .activityContent p:last-of-type {
+  font-family: "Poppins";
+  font-size: 18;
+  color: #fff;
+  
+}
+.TascActivity .DevelopmentContent  {
+background-color: #fff;
+width: 582px;
+padding-top: 25px;
+padding-bottom: 30px;
+padding-left: 35px;
+box-shadow: rgba(44, 44, 212, 0.2) 0px 3px 30px 0px;
+position: absolute;
+left: -11px;
+height: 230px;
+
+}
+.TascActivity .DevelopmentContent h2 {
+  font-family: "Poppins";
+  font-size: 18px;
+  color: #426b87;
+  font-weight: 600;
+}
+.TascActivity .DevelopmentContent h2 img:last-of-type {
+margin-left: 215px;
+}
+.TascActivity .DevelopmentContent p {
+  font-family: "Open Sans";
+  font-size: 16;
+  opacity: 0.67;
+}
+@media only screen and (max-width: 768px) {
+    .TascActivity {
+        background-image: url("../../../../Resources/Assets/Group 6493.png");
+        background-attachment: bottom;
+        background-repeat: no-repeat;
+        background-size: cover;
+        /* width: 1286px !important; */
+        background-position-x: right;
+        margin-left: 10px;
+        height: 610px;
+      }
+    .TascActivity .DevelopmentContent  {
+        width: auto;
+        height:fit-content;
+        
+        }
+}

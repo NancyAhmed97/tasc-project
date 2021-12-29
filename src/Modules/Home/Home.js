@@ -14,6 +14,7 @@ function Home() {
       <GeneralManager />
       <AccountingManager />
       <ITManager />
+      <h2 className="text-center mb-5" style={{fontSize:"30px",fontWeight:"bold",fontFamily:"Gotham"}}>Latest Posts</h2>
       <LatestPosts />
       <Footer activeState="home" />
     </div>

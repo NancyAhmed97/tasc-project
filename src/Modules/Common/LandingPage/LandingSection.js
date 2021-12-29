@@ -5,7 +5,7 @@ function LandingSection({activePage}) {
   return (
     <div className={activePage==="Pricing plans"?"Landing-pricing landing":(activePage==="Blog"?"Landing-blog landing":(activePage==="Contact us"?"Landing-contact landing":"LandingSection landing"))}>
       <div className="landing-container">
-        <h1 className="text-white">{activePage}</h1>
+        <h1 className="text-white">Our  {activePage}</h1>
         <ul>
           <li>
             <Link to="/" className="text-white">

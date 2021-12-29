@@ -9,6 +9,10 @@ function ApplicationPrices() {
     <div className="ApplicationPrices">
       <Container>
         <div className="title text-center">
+          <div className="priceDetails">
+            <div>Application Prices</div>
+            <div>Implementation Prices</div>
+          </div>
           <h2 className="py-5">Application Prices</h2>
         </div>
 

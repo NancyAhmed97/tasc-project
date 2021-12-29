@@ -86,3 +86,26 @@
     padding-top: 5px;
     padding-bottom: 22px;
 }
+@media only screen and (max-width: 768px) {
+  .login .img-container {
+    background-image: url("../../../Resources/Assets/Group 6026.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100%;
+    width: 100%;
+  }
+  .LoginContainer {
+    height: 518.63px;
+    width: 100%;
+    margin-left: 0px;
+  }
+  .login .passSeen {
+    position: absolute;
+    left: 83%;
+    bottom: 43%;
+}
+.login .formContainer{
+  margin-top: 25px;
+
+}
+}

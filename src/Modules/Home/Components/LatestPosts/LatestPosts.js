@@ -4,6 +4,7 @@ import {Link} from "react-router-dom"
 import "./LatestPosts.css";
 function LatestPosts() {
   return (
+    
     <div className="LatestPosts" style={{ position: "relative" }}>
       <div className="overlay"></div>
       <Container fluid>
@@ -19,7 +20,7 @@ function LatestPosts() {
                 egestas dignissim. Nunc euismod fringilla nisl, vitae efficitur
                 arcu sagittis
               </p>
-              <Link to="/posts" className="text-white">
+              <Link to="/postdetails" className="text-white">
               View post
                     </Link>
             </div>

@@ -10,7 +10,7 @@
 }
 .Landing-pricing{
     background-image: url("../../../Resources/Assets/pricingLanding.png");
-    background-attachment: bottom;
+	background-attachment: bottom;
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 	height: fit-content;
@@ -20,7 +20,7 @@
 .Landing-contact
 {
     background-image: url("../../../Resources/Assets/ContactLanding.png");
-    background-attachment: bottom;
+	background-attachment: bottom;
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 	height: fit-content;
@@ -94,4 +94,12 @@ border-radius: 50%;
 display: inline-block;
 background-color: #fff;
 margin-left: 12px;
+}
+@media only screen and (max-width: 768px) {
+    .landing .landing-container h1
+    {
+        font-family: "Gotham";
+    font-size: 28px;
+    text-transform: uppercase;
+    }
 }

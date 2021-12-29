@@ -31,11 +31,12 @@
   margin-bottom: 65px;
 }
 .GetInTouch .title h2 {
-  font-size: 35px;
+  font-size: 32px;
   font-weight: bold;
   font-family: "Gotham";
   color: #426b87;
   display: flex;
+  margin-right: 3px;
 }
 .GetInTouch .title ::before {
   content: url("../../../../Resources/Assets/Line 42.svg");
@@ -53,7 +54,7 @@
 }
 @media only screen and (max-width: 768px) {
   .GetInTouch .title h2 {
-    font-size: 21px;
+    font-size: 18px;
     font-weight: bold;
     font-family: "Gotham";
     color: #426b87;

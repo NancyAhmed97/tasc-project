@@ -4,6 +4,39 @@
   font-weight: bold;
   color: #426b87;
 }
+.ApplicationPrices .priceDetails
+{
+  display: flex;
+  flex-direction: row;
+  background-color: #F9FBFD;
+  margin: auto;
+  padding-left: 13px;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  width: 425px;
+  border: 1px solid #EBEFFC;
+  margin-top: 34px;
+}
+.ApplicationPrices .priceDetails div:first-of-type
+{
+background-color: #426B87;
+color: #fff;
+padding:9px 22px 12px 22px;
+margin-right: 16px;font-size: 16px;
+font-weight: 500;
+font-family: "Poppins";
+}
+.ApplicationPrices .priceDetails div:last-of-type
+{
+color: #426B87;
+opacity: 0.34;
+font-size: 16px;
+font-weight: 500;
+font-family: "Poppins";
+display: flex;
+align-items: center;
+
+}
 table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
@@ -58,24 +91,48 @@ tr:nth-child(odd) td:first-of-type {
   margin-bottom: 70px;
 }
 .ApplicationPrices ul li {
-  list-style: url("../../../../Resources/Assets/doubleStar.svg");
+  list-style: none;
   font-size: 14px;
   font-family: "Open Sans";
   opacity: 0.67;
   padding-left: 20px;
+  display: flex;
+justify-content: space-between;
+width: 37.5%;
+}
+.ApplicationPrices ul li::before {
+  content: url("../../../../Resources/Assets/doubleStar.svg");
+display: inline-block;
+position: relative;
+top: 6px;
 }
 .ApplicationPrices ul li:first-of-type {
-  list-style: url("../../../../Resources/Assets/star.svg");
   font-size: 14px;
   font-family: "Open Sans";
   opacity: 0.67;
+  display: flex;
+justify-content: space-between;
+width: 34%;
+}
+.ApplicationPrices ul li:first-of-type::before {
+content: url("../../../../Resources/Assets/star.svg");
+display: inline-block;
+position: relative;
+top: 6px;
 }
 .ApplicationPrices ul li:last-of-type {
-  list-style: url("../../../../Resources/Assets/asset1.svg");
   font-size: 14px;
   font-family: "Open Sans";
   opacity: 0.67;
+  display: flex;
+justify-content: space-between;
+width: 53%;
 }
+.ApplicationPrices ul li:last-of-type::before {
+content: url("../../../../Resources/Assets/asset1.svg");
+display: inline-block;
+position: relative;
+top: 6px;}
 .ApplicationPrices .button {
   text-align: center;
 }
@@ -92,8 +149,47 @@ tr:nth-child(odd) td:first-of-type {
   font-family: "Poppins";
   color: #fff;
   text-decoration: none;
+
 }
 @media only screen and (max-width: 768px) {
+
+  .ApplicationPrices ul
+  {
+    padding: 0;
+    margin: 0;
+  }
+  .ApplicationPrices ul li {
+
+  width: 100%;
+  margin-bottom: 15px;
+  }
+  .ApplicationPrices ul li:last-of-type {
+
+    width: 100%;
+}
+.ApplicationPrices .priceDetails
+{
+  display: flex;
+  flex-direction: row;
+  background-color: #F9FBFD;
+  margin: auto;
+  padding-left: 13px;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  width: 340px;
+  border: 1px solid #EBEFFC;
+  margin-top: 34px;
+}
+.ApplicationPrices .priceDetails div:first-of-type , .ApplicationPrices .priceDetails div:last-of-type
+{
+font-size: 12px;
+
+}
+
+  .ApplicationPrices ul li:first-of-type {
+
+    width: 100%;
+}
   table {
     width: 100%;
     table-layout: fixed;
@@ -105,6 +201,9 @@ tr:nth-child(odd) td:first-of-type {
     font-family: "Gotham";
     color: #426b87;
   }
+  .ApplicationPrices .button {
+    margin-top: 25px;
+}
 }
 @media (min-width: 768px) and (max-width: 991px) {
   table {

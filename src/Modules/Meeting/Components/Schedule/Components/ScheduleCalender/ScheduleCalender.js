@@ -12,7 +12,7 @@ function ScheduleCalender() {
   return (
     <div className="ScheduleCalender">
       <DatePicker onChange={onChange} className="mb-4" />
-      <p className="mb-5 pb-5">Time displayed in<span> Asia/Dubai</span> timezone</p>
+      <p className="mb-5 pb-5">Time displayed in<span> Istanbul/Turkey </span> timezone</p>
     </div>
   );
 }

@@ -13,10 +13,10 @@ function GetInTouchForm() {
           We’re glad to discuss your organisation’s situation. So please contact
           us via the details below, or enter your request.
         </p>
-        <input className="name w-100" type="text"/>
-        <input className="email w-100" type="email"/>
-        <input className="phone w-100" type="number"/>
-        <textarea className="w-100"></textarea>
+        <input className="name w-100" type="text" placeholder="Name"/>
+        <input className="email w-100" type="email" placeholder="E-mail"/>
+        <input className="phone w-100" type="number" placeholder="Phone Number"/>
+        <textarea className="w-100" rows="4" placeholder="Your Question"></textarea>
         <div className="button">
             <button type="submit" className="w-100">Submit</button>
         </div>

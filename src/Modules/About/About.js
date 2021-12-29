@@ -4,14 +4,16 @@ import TascCompanyInformation from "../Home/Components/TascCompanyInformation/Ta
 import LandingSection from "../../Modules/Common/LandingPage/LandingSection";
 import Navbar from "../Common/Navbar/Navbar";
 import AdvancedFeatures from "./Components/ADVANCEDFEATURES/AdvancedFeatures";
+import TascActivity from "./Components/TascActivity/TascActivity";
 
 function Home() {
   return (
     <div>
-      <Navbar activePage="About us"/>
-    <LandingSection activePage="About us" />
-    <TascCompanyInformation />
-    <AdvancedFeatures />
+      <Navbar activePage="About us" />
+      <LandingSection activePage="About us" />
+      <TascCompanyInformation />
+      <TascActivity />
+      <AdvancedFeatures />
       <Footer activeState="about" />
     </div>
   );
