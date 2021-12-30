@@ -42,7 +42,8 @@ function ConfirmyourdetailsForm() {
     e.preventDefault();
     if (!name || !phoneNumber ||!email||!companyName||!website||!companySite||!industry||!des||!kind) {
       setAlert(true);
-    } else {
+    } 
+    else {
       axios({
         method: "post",
         url: "http://localhost:8000/api/v1/contact",

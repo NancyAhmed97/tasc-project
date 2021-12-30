@@ -7,6 +7,8 @@
   background-image: url("../../../Resources/Assets/Group 6026.png");
   background-repeat: no-repeat;
   height: 100%;
+  position: relative;
+  left: 25px;
 }
 .login .formContainer {
   background-color: #fff;
@@ -25,7 +27,7 @@
   font-size: 14px;
   font-weight: 400;
   font-family: "Open Sans", sans-serif;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 .login ::placeholder {
   color: #426b87;
@@ -35,7 +37,7 @@
   opacity: 1;
 }
 
-.login :-ms-input-placeholder {
+/* .login :-ms-input-placeholder {
   color: #426b87;
   font-size: 12;
   font-weight: 400;
@@ -48,8 +50,8 @@
   font-size: 12;
   font-weight: 400;
   font-family: "Poppins";
-}
-.login label {
+} */
+.login .Remember {
   color: #757575;
   font-family: "Open Sans", sans-serif;
   font-size: 12px;
@@ -61,7 +63,11 @@
   font-weight: 400;
   text-decoration: none;
 }
-
+.login .checkbox label
+{
+  position: static !important;
+  margin-bottom: 25px;
+}
 .login .forgetPass {
   display: flex;
   justify-content: flex-end;
@@ -70,8 +76,13 @@
 .login .passSeen {
   position: absolute;
   left: 85%;
-  bottom: 190px;
+  bottom: 220px;
   /* bottom: 25%; */
+}
+.login .input
+{
+  background-color: #F9FBFD !important;
+  border: 1px solid #EBEFFC;
 }
 .login button {
   width: 148px;
@@ -80,12 +91,12 @@
   color: #fff;
   border: none;
 }
-.login #password,
+/* .login #password,
 .login #userName {
     padding-left: 13px;
     padding-top: 5px;
     padding-bottom: 22px;
-}
+} */
 @media only screen and (max-width: 768px) {
   .login .img-container {
     background-image: url("../../../Resources/Assets/Group 6026.png");
@@ -93,9 +104,34 @@
     background-size: contain;
     height: 100%;
     width: 100%;
+    position: static;
   }
   .LoginContainer {
     height: 518.63px;
+    width: 100%;
+    margin-left: 0px;
+  }
+  .login .passSeen {
+    position: absolute;
+    left: 83%;
+    bottom: 43%;
+}
+.login .formContainer{
+  margin-top: 25px;
+
+}
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .login .img-container {
+    background-image: url("../../../Resources/Assets/Group 6026.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    /* height: 100%; */
+    width: 100%;
+    position: static;
+  }
+  .LoginContainer {
+    /* height: 518.63px; */
     width: 100%;
     margin-left: 0px;
   }
