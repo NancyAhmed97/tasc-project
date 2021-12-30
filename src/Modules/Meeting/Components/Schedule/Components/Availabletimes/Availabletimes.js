@@ -138,6 +138,7 @@ function Availabletimes() {
           onClick={() => {
             if (value) {
               setRedirect(true);
+              localStorage.setItem("bookingTime",value)
             } else {
               setAlert(true);
             }

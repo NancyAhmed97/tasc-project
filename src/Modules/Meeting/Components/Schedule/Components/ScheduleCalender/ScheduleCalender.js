@@ -1,14 +1,22 @@
 import React
-// ,{useState} 
+, { useState }// ,{useState} 
 from "react";
 import DatePicker from "sassy-datepicker";
 import "./ScheduleCalender.css";
 function ScheduleCalender() {
-  // const [date, setDate] = useState("")
+  const [day, setDay] = useState("")
+  const [year, setYear] = useState("")
+  const [mon, setMon] = useState("")
   const onChange = (date) => {
     console.log(date.toString());
-    // setDate(date.toString())
+    setDay(date.toString().slice(8,10))
+    setYear(date.toString().slice(11,16))
+    setMon(date.toString().slice(4,7))
   };
+  const bookingDate=day+mon+year
+  console.log(bookingDate);
+  localStorage.setItem("date",bookingDate)
+
   return (
     <div className="ScheduleCalender">
       <DatePicker onChange={onChange} className="mb-4" />

@@ -12,7 +12,7 @@ function ConfirmyourdetailsForm() {
           <form>
             <p>
               i want a meeting with tasc expert on
-              <span> 8 Dec 2021, 10:00 AM</span>
+              <span> 8 Dec 2021, {localStorage.getItem("bookingTime")} AM</span>
             </p>
             <Row>
               <Col md={6} xs={12}>
