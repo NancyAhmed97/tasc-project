@@ -48,13 +48,10 @@ margin-bottom:80px;
     height:37px;
     background-color:#426B87;
     border:none;
-}
-.availableButton button a
-{
     color:#fff !important;
-text-decoration:none;
 
 }
+
 @media only screen and (max-width: 768px) {
     .availableButton{
         position: relative;
