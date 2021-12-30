@@ -4,6 +4,10 @@
     font-weight: 600;
     font-family: "Open Sans";
 }
+.RecentPostsContainer .title
+{
+    margin-top: 40px;
+}
 .RecentPostsContainer h2::after
 {
  display: block;

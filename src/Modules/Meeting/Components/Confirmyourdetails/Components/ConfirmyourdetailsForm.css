@@ -61,8 +61,8 @@ list-style: none;
 .ConfirmyourdetailsForm input
 {
     width: 328px;
-    height: 55px;
-    margin-bottom: 20px;
+    /* height: 55px; */
+    /* margin-bottom: 20px; */
     border: 1px solid #EBEFFC;
 }
 .ConfirmyourdetailsForm input[type='radio'] 
@@ -78,7 +78,6 @@ list-style: none;
     margin-bottom: 20px;
     border: 1px solid #EBEFFC;
     resize: none;
-    height: 132px;
     width: 100%;
     /* width: 686px;
     height: 132px;

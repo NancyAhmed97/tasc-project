@@ -1,7 +1,8 @@
 .GetInTouchForm
 {
     padding-top: 45px;
-    background-color: #EBEFFC;
+    background-color: #F9FBFD;
+    border: 1px solid #EBEFFC;
     padding-left: 25px;
     padding-right: 36px;
     padding-bottom: 42px;
@@ -20,9 +21,14 @@
 }
 .GetInTouchForm input
 {
-    margin-bottom: 10px;
     height: 61px;
-}.GetInTouchForm p{
+}
+.GetInTouchForm textarea
+{
+    resize: none;
+    padding-top: 25px;
+}
+.GetInTouchForm p{
     margin-bottom: 36px;
     font-size: 14px;
     opacity: 0.67;
