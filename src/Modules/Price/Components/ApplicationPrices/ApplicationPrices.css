@@ -4,6 +4,7 @@
   font-weight: bold;
   color: #426b87;
 }
+
 .ApplicationPrices .priceDetails
 {
   display: flex;
@@ -19,8 +20,6 @@
 }
 .ApplicationPrices .priceDetails div:first-of-type
 {
-background-color: #426B87;
-color: #fff;
 padding:9px 22px 12px 22px;
 margin-right: 16px;font-size: 16px;
 font-weight: 500;
@@ -28,13 +27,19 @@ font-family: "Poppins";
 }
 .ApplicationPrices .priceDetails div:last-of-type
 {
-color: #426B87;
-opacity: 0.34;
+/* opacity: 0.34; */
 font-size: 16px;
 font-weight: 500;
 font-family: "Poppins";
 display: flex;
 align-items: center;
+
+}
+.ApplicationPrices .Application ,.ApplicationPrices .Implementation
+{
+  color: #426b87;
+  opacity: 0.34;
+  cursor: pointer;
 
 }
 table {
@@ -86,6 +91,19 @@ tr:nth-child(even) {
 }
 tr:nth-child(odd) td:first-of-type {
   border-left: none !important;
+}
+.ApplicationPrices .AppCustomization
+{
+  border-right: none;
+}
+.ApplicationPrices .emptyCell
+{
+  border-left: none;
+  border-right: none;
+}
+.ApplicationPrices .lastEmptyCell
+{
+  border-left: none;
 }
 .ApplicationPrices ul {
   margin-bottom: 70px;
@@ -149,6 +167,14 @@ top: 6px;}
   font-family: "Poppins";
   color: #fff;
   text-decoration: none;
+
+}
+.ApplicationPrices .active
+{
+  background-color: #426B87;
+  color: #fff;
+  cursor: pointer;
+  padding:9px 10px 12px 12px;
 
 }
 @media only screen and (max-width: 768px) {

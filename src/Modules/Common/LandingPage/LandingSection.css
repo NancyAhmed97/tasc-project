@@ -32,7 +32,8 @@
 	height: fit-content;
     padding-top: 38px;
     padding-bottom: 38px;
-    background-color: #EBEFFC;
+    background-color: #F9FBFD;
+    border: 1px solid #EBEFFC;
 }
 .Landing-blog h1
 {

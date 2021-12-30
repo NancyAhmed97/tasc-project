@@ -1,5 +1,5 @@
 .sdp {
-  width:100% !important;
+  width:85% !important;
   box-shadow: none !important;
 }
 .sdp:focus
@@ -8,11 +8,11 @@
 }
 .sdp--month-picker button:first-of-type {
   position: absolute;
-  right: 43%;
+  right: 51%;
 }
 .sdp--month-picker button:last-of-type {
   position: absolute;
-  right: 40%;
+  right: 47%;
 }
 .sdp--dates-grid{
   height: 240px;
@@ -26,7 +26,7 @@ font-weight: bold;
 .sdp--date-btn__selected{
     background-color: #426B87;
     border-radius: 4px;
-    width: 67px;
+    width: 50px;
     color: #fff !important;
     height: 27px;
 }

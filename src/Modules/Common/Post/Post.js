@@ -11,7 +11,7 @@ function Post() {
       <img src={postImg} alt="postImg" />
       <div className="Content">
         <p className="date">
-          <img src={calendar} alt="calendar" />
+          <img src={ calendar} alt="calendar" />
           14, November 2021
         </p>
         <h5>Be Yourself, Everyone Else Is Already Taken.</h5>
