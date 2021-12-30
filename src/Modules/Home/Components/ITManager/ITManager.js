@@ -8,7 +8,7 @@ function ITManager() {
     <div className="ITManager">
       <Container fluid>
         <Row>
-          <Col md={7} xs={12}>
+          <Col md={6} xs={12}>
             <Title title="IT Manager" />
             <ul>
               <div>
@@ -27,7 +27,7 @@ function ITManager() {
               </div>
             </ul>
           </Col>
-          <Col md={5} xs={12} className="p-0 img-container">
+          <Col md={6} xs={12} className="p-0 img-container">
               <img src={ITMangerImg} alt="ITMangerImg" className="w-100" />
           </Col>
         </Row>
