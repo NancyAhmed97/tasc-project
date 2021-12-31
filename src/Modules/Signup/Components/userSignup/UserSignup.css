@@ -1,4 +1,4 @@
-.UserSignupContainer {
+/* .UserSignupContainer {
     height: 518.63px;
     width: 930px;
     margin-left: 90px;
@@ -71,7 +71,6 @@
     position: absolute;
     left: 85%;
     bottom: 190px;
-    /* bottom: 25%; */
   }
   .UserSignup button {
     width: 148px;
@@ -95,4 +94,72 @@
 
     }
   }
+   */
+   
+
+.UserSignup button
+{
+  width: 148px;
+  height: 37px;
+  background-color: #426b87;
+  color: #fff;
+  border: none;
+  margin-top: 25px;
+}
+.UserSignup .checkAccount{
+  color: #757575;
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  margin-top: 30px;
+
+}
+.UserSignup .forgetPassForm
+{
+  background-color: #fff;
+  padding: 50px 36px;
+  box-shadow: 5px 10px 8px 10px #ebeffc;
+  width: 90%;
+
+}
+.UserSignup .forgetPassCol
+{
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+
+@media only screen and (max-width: 768px) {
+
+  .UserSignup .forgetPassForm
+  {
+    background-color: #fff;
+    padding: 50px 36px;
+    box-shadow: 5px 10px 8px 10px #ebeffc;
+    width: 100%;
   
+  }
+  .UserSignup img
+  {
+    width: 100%;
+  }
+	.UserSignup .LoginForm 
+{
+	display: flex;
+height: 55vh;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+@-moz-document url-prefix() {
+	.UserSignup .LoginForm
+	{
+		display: flex;
+	height: 56vh;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+	}
+  }
+
+  }
