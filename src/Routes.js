@@ -13,6 +13,7 @@ import Post from "./Modules/Common/Post/Post";
 import RelatePosts from "./Modules/Blog/Components/RelatePosts/RelatePosts"
 import Signup from "./Modules/Signup/Signup";
 import UserSignup from "./Modules/Signup/Components/userSignup/UserSignup";
+import ForgetPassword from "./Modules/ForgetPassword/ForgetPassword";
 // import { Redirect } from "react-router-dom";
 // import { useSelector } from "react-redux";
 
@@ -36,6 +37,7 @@ function Routes() {
           <Route path="/postdetails" render={() => <RelatePosts />} />
           <Route path="/signup" render={() => <Signup />} />
           <Route path="/userSignup" render={() => <UserSignup />} />
+          <Route path="/forgotPassword" render={() => <ForgetPassword />} />
         </Switch>
       )}
     />

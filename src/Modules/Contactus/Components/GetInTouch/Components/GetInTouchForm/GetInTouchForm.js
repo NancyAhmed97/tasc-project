@@ -1,6 +1,7 @@
 import axios from "axios";
 import { Alert } from "react-bootstrap";
 import React, { useState } from "react";
+import { useSelector } from "react-redux";
 import "./GetInTouchForm.css";
 function GetInTouchForm() {
   const [name, setName] = useState("");
@@ -8,6 +9,8 @@ function GetInTouchForm() {
   const [phoneNumber, setPhoneNumber] = useState("");
   const [msg, setMsg] = useState("");
   const [alert, setAlert] = useState(false);
+  const { currentLocal } = useSelector((state) => state.currentLocal);
+
   const getData = (e) => {
     if (e.target.id === "name") {
       setName(e.target.value);
@@ -42,36 +45,47 @@ function GetInTouchForm() {
     <div className="GetInTouchForm">
       <form onSubmit={sendData}>
         <p>
-          We’re glad to discuss your organisation’s situation. So please contact
-          us via the details below, or enter your request.
+        {currentLocal.contactus.pragraph}
+
         </p>
         <p >
           {alert && (
-            <Alert variant={"danger"}>Please choose your avalible time</Alert>
+            <Alert variant={"danger"}>{currentLocal.contactus.alert}</Alert>
           )}
         </p>
-        <label>Name</label>
+        <label>
+        {currentLocal.contactus.name}
+        </label>
         <input
           className="name w-100 input"
           id="name"
           type="text"
           onChange={getData}
         />
-        <label>E-mail</label>
+        <label>
+        {currentLocal.contactus.email}
+
+        </label>
         <input
           className="email w-100 input"
           id="email"
           type="email"
           onChange={getData}
         />
-        <label>Phone Number</label>
+        <label>
+        {currentLocal.contactus.phoneNumber}
+
+        </label>
         <input
           className="phone w-100 input"
           id="phone"
           type="number"
           onChange={getData}
         />
-        <label>Your Question</label>
+        <label>
+        {currentLocal.contactus.yourQuestion}
+
+        </label>
         <textarea
           className="w-100 input"
           id="msg"
@@ -80,7 +94,7 @@ function GetInTouchForm() {
         ></textarea>
         <div className="button">
           <button type="submit" className="w-100">
-            Submit
+          {currentLocal.contactus.submit}
           </button>
         </div>
       </form>

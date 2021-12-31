@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Col, Container, Dropdown, Row } from "react-bootstrap";
 import FooterLogo from "../../../Resources/Assets/FooterLogo.png";
 import facebook from "../../../Resources/Assets/facebook.svg";
@@ -6,15 +6,20 @@ import twitter from "../../../Resources/Assets/twitter.svg";
 import instagram from "../../../Resources/Assets/instagram.svg";
 import topArrow from "../../../Resources/Assets/topArrow.svg";
 import langIcon from "../../../Resources/Assets/langIcon.svg";
+import { useSelector, useDispatch } from "react-redux";
+import { changeLocal } from "../../../Redux/Localization";
+
 import "./Footer.css";
 import { Link } from "react-router-dom";
-function Footer({activeState}) {
-  const [visible, setIsVisible] = useState(false)
-  
+function Footer({ activeState }) {
+  const dispatch = useDispatch();
+	const { currentLocal } = useSelector((state) => state.currentLocal);
+  const [visible, setIsVisible] = useState(false);
+
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth"
+      behavior: "smooth",
     });
   };
 
@@ -37,12 +42,11 @@ function Footer({activeState}) {
     <footer className="footer">
       <Container fluid>
         <Row>
-          <Col md="6" xs={12} style={{position:"relative"}}>
+          <Col md="6" xs={12} style={{ position: "relative" }}>
             <div className="footer-img">
-<Link to="/" >
-<img src={FooterLogo} alt="FooterLogo" />
-
-</Link>
+              <Link to="/">
+                <img src={FooterLogo} alt="FooterLogo" />
+              </Link>
               <p>
                 Aenean imperdiet dignissim pulvinar. Nullam faucibus nibh at
                 egestas dignissim. Nunc euismod fringilla nisl, vitae efficitur
@@ -62,9 +66,22 @@ function Footer({activeState}) {
                       Home
                     </Link>
                   </li> */}
-                
-                  <li className={activeState==="about"?"active text-white ":"text-white "}>
-                    <Link to="/aboutus" className={activeState==="about"?"text-white ":"text-white px-3"}>
+
+                  <li
+                    className={
+                      activeState === "about"
+                        ? "active text-white "
+                        : "text-white "
+                    }
+                  >
+                    <Link
+                      to="/aboutus"
+                      className={
+                        activeState === "about"
+                          ? "text-white "
+                          : "text-white px-3"
+                      }
+                    >
                       About us
                     </Link>
                   </li>
@@ -73,8 +90,21 @@ function Footer({activeState}) {
                     Services
                                         </Link>
                   </li> */}
-                  <li className={activeState==="blog"?"active text-white mt-3":"text-white mt-3"}>
-                    <Link to="/blog" className={activeState==="blog"?"text-white ":"text-white px-3"}>
+                  <li
+                    className={
+                      activeState === "blog"
+                        ? "active text-white mt-3"
+                        : "text-white mt-3"
+                    }
+                  >
+                    <Link
+                      to="/blog"
+                      className={
+                        activeState === "blog"
+                          ? "text-white "
+                          : "text-white px-3"
+                      }
+                    >
                       Blog
                     </Link>
                   </li>
@@ -82,13 +112,39 @@ function Footer({activeState}) {
               </div>
               <div className="mt-3">
                 <ul>
-                  <li className={activeState==="pricing"?"active text-white ":"text-white"}>
-                    <Link to="/pricing" className={activeState==="pricing"?"text-white ":"text-white px-3"}>
+                  <li
+                    className={
+                      activeState === "pricing"
+                        ? "active text-white "
+                        : "text-white"
+                    }
+                  >
+                    <Link
+                      to="/pricing"
+                      className={
+                        activeState === "pricing"
+                          ? "text-white "
+                          : "text-white px-3"
+                      }
+                    >
                       Pricing
                     </Link>
                   </li>
-                  <li className={activeState==="contact"?"active text-white mt-3":"text-white mt-3"}>
-                    <Link to="/contactus" className={activeState==="contact"?"text-white ":"text-white px-3"}>
+                  <li
+                    className={
+                      activeState === "contact"
+                        ? "active text-white mt-3"
+                        : "text-white mt-3"
+                    }
+                  >
+                    <Link
+                      to="/contactus"
+                      className={
+                        activeState === "contact"
+                          ? "text-white "
+                          : "text-white px-3"
+                      }
+                    >
                       Contact us
                     </Link>
                   </li>
@@ -142,6 +198,13 @@ function Footer({activeState}) {
 
                 <Dropdown.Menu>
                   <Dropdown.Item
+                    onClick={() => {
+                      dispatch(
+                        changeLocal(
+                          currentLocal.language === "English" ? "ar" : "en"
+                        )
+                      );
+                    }}
                     id="Arabic"
                     // onClick={(e) => {
                     //   setLang(e.target.id);
@@ -153,7 +216,11 @@ function Footer({activeState}) {
                 </Dropdown.Menu>
               </Dropdown>
             </div>
-            <div className="arrow" onClick={scrollToTop} style={{display: visible ? 'block' : 'none'}}  >
+            <div
+              className="arrow"
+              onClick={scrollToTop}
+              style={{ display: visible ? "block" : "none" }}
+            >
               <div className="arrow-container">
                 <img src={topArrow} alt="topArrow" />
               </div>
