@@ -1,13 +1,15 @@
 import React from "react";
 import { Col, Container, Form, Row } from "react-bootstrap";
 import arrowRight from "../../../../Resources/Assets/arrow-right.svg";
+import one from "../../../../Resources/Assets/Group 6499.png";
+import two from "../../../../Resources/Assets/Group 6498.png";
 
 import "./CompanySignup.css";
 function CompanySignup() {
   const sendData = (e) => {
     e.preventDefault();
     console.log("gi");
-    localStorage.setItem("signupState","CompanySignup")
+    localStorage.setItem("signupState", "CompanySignup");
   };
   return (
     <div className="CompanySignup">
@@ -17,77 +19,78 @@ function CompanySignup() {
             <Col md={6} xs={12}>
               <div className="formContainer">
                 <h4>Sign up !</h4>
-                <p>
-                <span className="mx-5">First</span>
-                <span>last</span>
+                <p className="numImg">
+                  <span >
+                    <img src={one} alt="one"  className="mr-5"/>
+                  </span>
+                  <span>
+                    <img src={two} alt="two" />
+                  </span>
                 </p>
+                <p>Company info</p>
                 <Form onSubmit={sendData}>
                   <Container fluid className="p-0">
                     <Row>
                       <Col md={12}>
+                        <label>Company Name</label>
                         <input
                           type="text"
-                          placeholder="Company Name"
-                          className="w-100 mb-4"
-                          id="userName"
+                          className="w-100 input"
+                          id="Company Name"
                         />
                       </Col>
                       <Col md={12}>
+                        <label>Selector</label>
                         <input
                           type="text"
-                          placeholder="Selector"
-                          className="w-100 mb-4"
-                          id="userName"
+                          className="w-100 input"
+                          id="Selector"
                         />
                       </Col>
                       <Col md={12}>
+                        <label>Email</label>
                         <input
                           type="email"
-                          placeholder="Email"
-                          className="w-100 mb-4"
-                          id="userName"
+                          className="w-100 input"
+                          id="email"
                         />
                       </Col>
                       <Col md={12}>
+                        <label>Phone Number</label>
                         <input
                           type="number"
-                          placeholder="Phone Number"
-                          className="w-100 mb-4"
-                          id="userName"
+                          className="w-100 input"
+                          id="Phone Number"
                         />
                       </Col>
                       <Col md={6}>
+                        <label>Country</label>
                         <input
                           type="text"
-                          placeholder="Country"
-                          className="w-100 mb-4"
-                          id="userName"
+                          className="w-100 input"
+                          id="country"
                         />
                       </Col>
                       <Col md={6}>
-                        <input
-                          type="text"
-                          placeholder="City"
-                          className="w-100 mb-4"
-                          id="userName"
-                        />
+                        <label>City</label>
+                        <input type="text" className="w-100 input" id="city" />
                       </Col>
                       <Col md={12}>
+                        <label>Address</label>
                         <input
                           type="text"
-                          placeholder="Address"
-                          className="w-100 mb-4"
-                          id="userName"
+                          className="w-100 input mb-4"
+                          id="Address"
                         />
                       </Col>
                     </Row>
                   </Container>
                   <Row>
                     <div className="button">
-                        <button type="submit">
-                          Next
-                          <img src={arrowRight} alt="arrowRight" />
-                        </button>
+                      <button type="submit">
+                        Next
+                        <img src={arrowRight} alt="arrowRight" />
+                      </button>
                     </div>
                   </Row>
                 </Form>

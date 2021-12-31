@@ -3,6 +3,11 @@
   width: 930px;
   margin-left: 90px;
 }
+.CompanySignup .numImg img:first-of-type
+{
+  margin-right: 25px;
+}
+
 .CompanySignup .img-container {
   background-image: url("../../../../Resources/Assets/Group 6026.png");
   background-repeat: no-repeat;
@@ -33,6 +38,14 @@
   font-weight: 400;
   font-family: "Poppins";
   opacity: 1;
+}
+.CompanySignup .formContainer p:last-of-type
+{
+  font-family: "Poppins";
+  font-size: 14px;
+  font-weight: 600;
+  color: #426B87;
+margin-bottom: 0;
 }
 
 .CompanySignup :-ms-input-placeholder {

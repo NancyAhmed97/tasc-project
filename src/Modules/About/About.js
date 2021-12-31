@@ -11,7 +11,7 @@ function Home() {
     <div>
       <Navbar activePage="About us" />
       <LandingSection activePage="About us" />
-      <TascCompanyInformation />
+      <TascCompanyInformation state={"about"}/>
       <TascActivity />
       <AdvancedFeatures />
       <Footer activeState="about" />
