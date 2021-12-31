@@ -61,6 +61,8 @@ function CompanySignup() {const [email, setEmail] = useState("");
                             type="text"
                             className="w-100  input"
                             id="userName"
+                            onChange={handleChange}
+
                           />
                         </Col>
                         <Col md={12}>

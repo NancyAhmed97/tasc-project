@@ -69,6 +69,7 @@ function UserSignup() {
                             type="text"
                             className="w-100 input"
                             id="Surname"
+                            onChange={handleChange}
                           />
                         </Col>
                         <Col md={12}>

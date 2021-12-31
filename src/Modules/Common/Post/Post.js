@@ -8,7 +8,7 @@ function Post() {
   return (
     <div className="post">
       <div className="overlay"></div>
-      <img src={postImg} alt="postImg" />
+      <img src={postImg} alt="postImg" className="postImg" />
       <div className="Content">
         <p className="date">
           <img src={ calendar} alt="calendar" />

@@ -119,7 +119,7 @@
   background-color: #fff;
   padding: 50px 36px;
   box-shadow: 5px 10px 8px 10px #ebeffc;
-  width: 90%;
+  width: 100%;
 
 }
 .UserSignup .forgetPassCol
@@ -141,8 +141,9 @@ justify-content: center;
   }
   .UserSignup img
   {
-    width: 100%;
-  }
+    position: relative;
+    top: 8%;
+    width: 90%;  }
 	.UserSignup .LoginForm 
 {
 	display: flex;

@@ -3,7 +3,7 @@
   width: 358px;
   margin-bottom: 125px;
 }
-.post .overlay {
+/* .post .overlay {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -20,7 +20,7 @@
   right: 0;
   background-color: #000;
   opacity: 0.1;
-}
+} */
 .post .Content {
   padding-top: 24px;
   width: 87%;
@@ -70,4 +70,12 @@
   font-weight: bold;
   font-size: 20px;
   font-family: "Gotham";
+}
+.post .postImg
+{
+  filter: grayscale(100%);
+}
+.post .postImg:hover
+{
+  filter: grayscale(0%);
 }
