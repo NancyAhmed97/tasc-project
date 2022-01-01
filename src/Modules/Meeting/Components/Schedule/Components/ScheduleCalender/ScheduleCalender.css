@@ -2,17 +2,25 @@
   width:85% !important;
   box-shadow: none !important;
 }
+.arDatePicker .sdp--month-picker .sdp--month-picker button:first-of-type {
+  position: absolute;
+  left:19%;
+}
+.arDatePicker .sdp--month-picker .sdp--month-picker button:last-of-type {
+  position: absolute;
+  left:24%;
+}
 .sdp:focus
 {
   box-shadow: none;
 }
 .sdp--month-picker button:first-of-type {
   position: absolute;
-  right: 51%;
+  right: 24%;
 }
 .sdp--month-picker button:last-of-type {
   position: absolute;
-  right: 47%;
+  right: 19%;
 }
 .sdp--dates-grid{
   height: 240px;
@@ -52,11 +60,11 @@ color: #000000;}
 @media only screen and (max-width: 768px) {
   .sdp--month-picker button:first-of-type {
     position: absolute;
-    right: 20%;
+    right: 80%;
   }
   .sdp--month-picker button:last-of-type {
     position: absolute;
-    right: 11%;
+    right: 70%;
   }
 
 }

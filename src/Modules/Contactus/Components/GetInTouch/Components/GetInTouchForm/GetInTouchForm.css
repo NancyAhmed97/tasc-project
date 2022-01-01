@@ -9,6 +9,14 @@
     width: 485px;
     margin-bottom: 60px;
 }
+.GetInTouchForm label{
+    position: relative;
+top: 28px;
+right: 13px;
+font-family: "Poppins";
+font-size: 12px;
+color: #426B87 !important;
+}
 .GetInTouchForm form{
     width: 423px;
 }

@@ -4,9 +4,11 @@ import leftArrow from "../../../../Resources/Icon feather-arrow-right.svg";
 import rightArrow from "../../../../Resources/Fonts/Icon feather-arrow-right.svg";
 import ReactPaginate from "react-paginate";
 import "./Posts.css";
+import { useSelector } from "react-redux";
 import { useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 function Posts() {
+  const { currentLocal } = useSelector((state) => state.currentLocal);
   const JsonData = [
     {
       id: 1,
@@ -231,8 +233,8 @@ function Posts() {
         <Row>{displayUsers}</Row>
       </Container>
       <ReactPaginate
-        previousLabel={<img src={leftArrow} alt="leftArrow" />}
-        nextLabel={<img src={rightArrow} alt="rightArrow" />}
+        previousLabel={currentLocal.language==="English"?<img src={leftArrow} alt="leftArrow" />:<img src={rightArrow} alt="rightArrow" />}
+        nextLabel={currentLocal.language==="English"?<img src={rightArrow} alt="rightArrow" />:<img src={leftArrow} alt="leftArrow" />}
         pageCount={pageCount}
         breakLabel={"none"}
         onPageChange={changePage}

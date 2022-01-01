@@ -1,18 +1,31 @@
 import React, { useState } from 'react'
-import { Col, Container, Row } from 'react-bootstrap';
+import { Alert, Col, Container, Row } from 'react-bootstrap';
 import { useSelector } from "react-redux";
 import img from "../../../Resources/Assets/Group 6026.png"
 import { Link } from 'react-router-dom';
 import "./ForgetPasswordForm.css"
+import axios from 'axios';
 function ForgetPasswordForm() {
 	const [email, setEmail] = useState("");
   const [alert, setAlert] = useState(false);
-
   const { currentLocal } = useSelector((state) => state.currentLocal);
 	const sendData = (e) => {
 		e.preventDefault();
-console.log("hi");
-
+		if(!email){
+			setAlert(true)
+		}else{
+			setAlert(false)
+			axios({
+				method: "post",
+				url: "http://localhost:8000/api/v1/forgetPassowd",
+				data: {
+				  email: email,
+				},
+			  }).then((res) => {
+				console.log(res);
+			  });
+			
+		}
 
 	};
 	const handleChange = (e) => {
@@ -20,7 +33,6 @@ console.log("hi");
 		switch (id) {
 			case "email": {
 				setEmail(e.target.value);
-				setAlert(false)
 				break;
 			}
 			default:
@@ -37,7 +49,7 @@ console.log("hi");
  					<div >
 					 <div className="errorMsg">
                 {alert && !email && (
-                  <div className="f-12">*{currentLocal.login.emailIsRequired}</div>
+                  <Alert className={currentLocal.language==="العربيه"&&"text-right"} variant={"danger"}>*{currentLocal.login.emailIsRequired}</Alert>
                 )}
               </div>
               <label>{currentLocal.login.email}</label>
@@ -59,11 +71,11 @@ console.log("hi");
 						{currentLocal.login.send}
 					</button>
 				</div>
-				<div className="checkAccount">
+				<div className={currentLocal.language==="العربيه"?"text-right checkAccount":"checkAccount"}>
 					<span> {currentLocal.login.RememberYourPassword}</span>
 					<span className="mx-2">
 						{" "}
-						<Link to="/loginByEmail"> {currentLocal.login.signin} </Link>
+						<Link to="/login"> {currentLocal.login.signin} </Link>
 					</span>
 				</div>
 			</form>

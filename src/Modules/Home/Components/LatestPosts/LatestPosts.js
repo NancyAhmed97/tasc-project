@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 import "./LatestPosts.css";
 function LatestPosts() {
   const [changeFirstText, setChangeFirstText] = useState(false);
   const [changSecondText, setChangSecondText] = useState(false);
+  const { currentLocal } = useSelector((state) => state.currentLocal);
+
   return (
     <div className="LatestPosts">
       <section
@@ -11,7 +14,7 @@ function LatestPosts() {
         data-v-d078e6ae=""
         data-v-e100241a=""
       >
-        <div class="latest-posts-section__accordion" data-v-d078e6ae="">
+        <div class={currentLocal.language==="العربيه"?"latest-posts-section__accordion text-right":"latest-posts-section__accordion"} data-v-d078e6ae="">
           <div
             class="latest-posts-section__accordion__img img-1"
             data-v-d078e6ae=""
@@ -21,10 +24,7 @@ function LatestPosts() {
             )}
 
             {changeFirstText || changSecondText ? (
-              <p className="title">
-                {" "}
-                Be Yourself, Everyone Else Is Already Taken.
-              </p>
+              <p className="title"> {currentLocal.home.beYourself}</p>
             ) : (
               <>
                 <div className="textContainer">
@@ -33,7 +33,7 @@ function LatestPosts() {
                     className="titlePragraph"
                   >
                     {" "}
-                    Be Yourself, Everyone Else Is Already Taken.
+                    {currentLocal.home.beYourself}{" "}
                   </p>
                   <p className="text-post">
                     Aenean imperdiet dignissim pulvinar. Nullam faucibus nibh at
@@ -41,7 +41,7 @@ function LatestPosts() {
                     efficitur arcu sagittis
                   </p>
                   <Link to="/postdetails" className="text-white">
-                    View post
+                  {currentLocal.home.viewpost}
                   </Link>
                 </div>
               </>
@@ -61,13 +61,13 @@ function LatestPosts() {
 
             {changeFirstText ? (
               <>
-                  <div className="textContainer">
+                <div className="textContainer">
                   <p
                     style={{ position: "relative", zIndex: "200" }}
                     className="titlePragraph"
                   >
                     {" "}
-                    Be Yourself, Everyone Else Is Already Taken.
+                    {currentLocal.home.beYourself}{" "}
                   </p>
                   <p className="text-post">
                     Aenean imperdiet dignissim pulvinar. Nullam faucibus nibh at
@@ -75,15 +75,12 @@ function LatestPosts() {
                     efficitur arcu sagittis
                   </p>
                   <Link to="/postdetails" className="text-white">
-                    View post
+                    {currentLocal.home.viewpost}
                   </Link>
                 </div>
               </>
             ) : (
-              <p className="title">
-                {" "}
-                Be Yourself, Everyone Else Is Already Taken.
-              </p>
+              <p className="title"> {currentLocal.home.beYourself} </p>
             )}
           </div>
           <div
@@ -106,7 +103,7 @@ function LatestPosts() {
                     className="titlePragraph"
                   >
                     {" "}
-                    Be Yourself, Everyone Else Is Already Taken.
+                    {currentLocal.home.beYourself}{" "}
                   </p>
                   <p className="text-post">
                     Aenean imperdiet dignissim pulvinar. Nullam faucibus nibh at
@@ -114,47 +111,16 @@ function LatestPosts() {
                     efficitur arcu sagittis
                   </p>
                   <Link to="/postdetails" className="text-white">
-                    View post
+                  {currentLocal.home.viewpost}
                   </Link>
                 </div>
               </>
             ) : (
-              <p className="title">
-                {" "}
-                Be Yourself, Everyone Else Is Already Taken.
-              </p>
+              <p className="title"> {currentLocal.home.beYourself} </p>
             )}
           </div>{" "}
         </div>
       </section>
-      {/* <div className="overlay"></div>
-      <Container fluid>
-        <Row>
-          <Col md={6} xs={12} className="p-0 first-sec">
-            <div  className="textContainer">
-              <p style={{ position: "relative", zIndex: "200" }}>
-                {" "}
-                Be Yourself, Everyone Else Is Already Taken.
-              </p>
-              <p className="text-post">
-                Aenean imperdiet dignissim pulvinar. Nullam faucibus nibh at
-                egestas dignissim. Nunc euismod fringilla nisl, vitae efficitur
-                arcu sagittis
-              </p>
-              <Link to="/postdetails" className="text-white">
-              View post
-                    </Link>
-            </div>
-          </Col>
-
-          <Col md={3} className="third-sec">
-            <p> Be Yourself, Everyone Else Is Already Taken.</p>
-          </Col>
-          <Col md={3} className="scond-sec">
-            <p> Be Yourself, Everyone Else Is Already Taken.</p>
-          </Col>
-        </Row>
-      </Container> */}
     </div>
   );
 }

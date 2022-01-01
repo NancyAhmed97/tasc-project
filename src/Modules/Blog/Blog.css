@@ -7,11 +7,29 @@ color: #426B87;
 margin-top: 49px;
 margin-bottom: 30px;
 }
+.blog .arblogPargraph
+{
+    font-size: 20px;
+font-weight: 600;
+font-family: "Poppins";
+color: #426B87;
+margin-top: 49px;
+margin-bottom: 30px;
+text-align: right;
+}
 .blog .blogPargraph::after
 {
 content:url("../../Resources/Assets/Line\ 44.svg");
 display: inline-block;
 margin-left: 25px;
+width: 50%;
+height: 5px;
+}
+.blog .arblogPargraph::after
+{
+    content:url("../../Resources/Assets/Line\ 44.svg");
+display: inline-block;
+margin-right: 25px;
 width: 50%;
 height: 5px;
 }
@@ -21,11 +39,17 @@ height: 5px;
     display: none;
  
     }
+    .blog .arblogPargraph::before{
+        display: none;
+    }
 }
 @media  (min-width: 768px) and (max-width: 991px) {
     .blog .blogPargraph::after
     {
     display: none;
  
+    }
+    .blog .arblogPargraph::before{
+        display: none;
     }
 }

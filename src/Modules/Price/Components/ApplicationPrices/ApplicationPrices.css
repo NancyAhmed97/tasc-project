@@ -14,7 +14,7 @@
   padding-left: 13px;
   padding-top: 9px;
   padding-bottom: 9px;
-  width: 425px;
+  width: fit-content;
   border: 1px solid #EBEFFC;
   margin-top: 34px;
 }
@@ -118,6 +118,7 @@ tr:nth-child(odd) td:first-of-type {
 justify-content: space-between;
 width: 37.5%;
 }
+
 .ApplicationPrices ul li::before {
   content: url("../../../../Resources/Assets/doubleStar.svg");
 display: inline-block;
@@ -132,6 +133,16 @@ top: 6px;
 justify-content: space-between;
 width: 34%;
 }
+.ApplicationPrices .text-right  li:first-of-type
+{
+  width: 20% ;
+
+}
+.ApplicationPrices .text-right  li
+{
+  width: 19.5%;
+
+}
 .ApplicationPrices ul li:first-of-type::before {
 content: url("../../../../Resources/Assets/star.svg");
 display: inline-block;
@@ -145,6 +156,11 @@ top: 6px;
   display: flex;
 justify-content: space-between;
 width: 53%;
+}
+.ApplicationPrices .text-right  li:last-of-type
+{
+  width: 34%;
+
 }
 .ApplicationPrices ul li:last-of-type::before {
 content: url("../../../../Resources/Assets/asset1.svg");
@@ -202,7 +218,8 @@ top: 6px;}
   padding-left: 13px;
   padding-top: 9px;
   padding-bottom: 9px;
-  width: 340px;
+  width: fit-content;
+  margin-right: 15px;
   border: 1px solid #EBEFFC;
   margin-top: 34px;
 }

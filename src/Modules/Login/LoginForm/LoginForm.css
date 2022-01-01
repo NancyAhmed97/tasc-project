@@ -3,13 +3,13 @@
   width: 930px;
   margin-left: 90px;
 }
-.login .img-container {
+/* .login .img-container {
   background-image: url("../../../Resources/Assets/Group 6026.png");
   background-repeat: no-repeat;
   height: 100%;
   position: relative;
   left: 25px;
-}
+} */
 .login .formContainer {
   background-color: #fff;
   padding: 50px 36px;

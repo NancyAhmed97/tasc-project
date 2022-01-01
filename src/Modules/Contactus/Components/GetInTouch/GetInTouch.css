@@ -48,6 +48,7 @@
   margin-right: 30px;
   flex-direction: row;
 }
+
 .GetInTouch .getTouchForm {
   display: flex;
   justify-content: flex-end;

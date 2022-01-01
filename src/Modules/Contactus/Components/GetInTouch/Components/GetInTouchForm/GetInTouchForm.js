@@ -43,7 +43,7 @@ function GetInTouchForm() {
   };
   return (
     <div className="GetInTouchForm">
-      <form onSubmit={sendData}>
+      <form onSubmit={sendData} className={currentLocal.language==="العربيه"&&"arForm"}>
         <p>
         {currentLocal.contactus.pragraph}
 

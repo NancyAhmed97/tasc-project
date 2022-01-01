@@ -22,9 +22,21 @@
   margin-top: 5px;
   display: inline-block;
 }
+.LatestPosts .text-right a::after {
+  content: url("../../../../Resources/Assets/Icon feather-arrow-right.svg");
+  margin-right: 8px;
+  margin-top: 5px;
+  display: inline-block;
+}
 .LatestPosts .textContainer {
   position: relative;
   left: 9%;
+  top: 44%;
+}
+.LatestPosts .text-right .textContainer
+{
+  position: relative;
+  right: 9%;
   top: 44%;
 }
 .LatestPosts .textContainer p {

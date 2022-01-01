@@ -1,13 +1,16 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import "./Categoury.css";
 function Categoury() {
+  const { currentLocal } = useSelector((state) => state.currentLocal);
+
     const filterByCategory=()=>{
     alert("fds")
     }
   return (
     <div className="Categoury">
       <div className="title">
-        <h2>category</h2>
+        <h2>{currentLocal.post.category}</h2>
       </div>
       <ul>
         <li>

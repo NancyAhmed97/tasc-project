@@ -13,17 +13,15 @@ function RelatePosts() {
      
      <Container>
        <Row>
-         <Col md={9} xs={12}>
+         <Col lg={9} md={12} xs={12}>
       <PostDetails />
          </Col>
-         <Col md={3} xs={12}>
+         <Col lg={3} md={12} xs={12}>
          <RecentPosts />
          </Col>
        </Row>
      </Container>
-      {/* <Contentwithoutbackward />
-      <RelatedPosts /> */}
-      <Footer activeState="blog" />
+    <Footer activeState="blog" />
     </div>
   );
 }

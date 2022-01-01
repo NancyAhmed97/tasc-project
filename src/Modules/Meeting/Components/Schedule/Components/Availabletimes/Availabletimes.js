@@ -1,12 +1,24 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import { Container, Row, Col, Alert } from "react-bootstrap";
+import { useSelector } from "react-redux";
 import "./Availabletimes.css";
-function Availabletimes() {
+function Availabletimes({date}) {
+  const { currentLocal } = useSelector((state) => state.currentLocal);
   const history = useHistory();
   const [alert, setAlert] = useState(false);
   const [redirect, setRedirect] = useState(false);
   const [value, setValue] = useState("");
+    const [day, setDay] = useState("")
+  const [year, setYear] = useState("")
+  const [mon, setMon] = useState("")
+  const [bookingDate, setBookingDate] = useState("")
+  useEffect(() => {
+    setDay(date.toString().slice(8,10))
+    setYear(date.toString().slice(11,16))
+    setMon(date.toString().slice(4,7))
+    setBookingDate(day +' , '+ mon+year)
+  }, [date,day,mon,year])
   const chooseTime = (e) => {
     setValue(e.target.id);
   };
@@ -17,7 +29,7 @@ function Availabletimes() {
     <>
       <div className="Availabletimes">
         <p>
-          Available times on <span> 8, December 2021</span>{" "}
+          {currentLocal.meeting.availibleTime} <span>{bookingDate}</span>{" "}
         </p>
         <div className="AvailabletimesConatiner">
           <Container fluid className="p-0">
@@ -133,18 +145,18 @@ function Availabletimes() {
           </Container>
         </div>
       </div>
-      <div className="availableButton">
+      <div className={currentLocal.language==="English"?"availableButton":"aravailableButton"}>
         <button
           onClick={() => {
             if (value) {
               setRedirect(true);
-              localStorage.setItem("bookingTime",value)
+              localStorage.setItem("bookingTime", value);
             } else {
               setAlert(true);
             }
           }}
         >
-          Confirm
+          {currentLocal.meeting.Confirm}
         </button>
       </div>
     </>

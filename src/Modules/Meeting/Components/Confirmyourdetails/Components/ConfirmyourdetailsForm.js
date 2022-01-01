@@ -1,9 +1,12 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Alert, Col, Container, Row } from "react-bootstrap";
+import { useSelector } from "react-redux";
 import "./ConfirmyourdetailsForm.css";
 function ConfirmyourdetailsForm() {
   const [name, setName] = useState("");
+  const { currentLocal } = useSelector((state) => state.currentLocal);
+  const {DateSelect}  = useSelector((state) =>state.DateSelect)
   const [email, setEmail] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [des, setdes] = useState("");
@@ -12,7 +15,20 @@ function ConfirmyourdetailsForm() {
   const [companySite, setCompanySite] = useState("");
   const [industry, setIndustry] = useState("");
   const [kind, setKind] = useState("");
+      const [day, setDay] = useState("")
+  const [year, setYear] = useState("")
+  const [mon, setMon] = useState("")
+  const [bookingDate, setBookingDate] = useState("")
+
   const [alert, setAlert] = useState(false);
+  console.log(DateSelect.DateSelect);
+  useEffect(() => {
+    setDay(DateSelect.DateSelect.toString().slice(8,10))
+    setYear(DateSelect.DateSelect.toString().slice(11,16))
+    setMon(DateSelect.DateSelect.toString().slice(4,7))
+    setBookingDate(day +' , '+ mon+year)
+  }, [DateSelect.DateSelect,day,mon,year])
+
   const getData = (e) => {
     if (e.target.id === "name") {
       setName(e.target.value);
@@ -40,10 +56,19 @@ function ConfirmyourdetailsForm() {
   };
   const sendData = (e) => {
     e.preventDefault();
-    if (!name || !phoneNumber ||!email||!companyName||!website||!companySite||!industry||!des||!kind) {
+    if (
+      !name ||
+      !phoneNumber ||
+      !email ||
+      !companyName ||
+      !website ||
+      !companySite ||
+      !industry ||
+      !des ||
+      !kind
+    ) {
       setAlert(true);
-    } 
-    else {
+    } else {
       axios({
         method: "post",
         url: "http://localhost:8000/api/v1/contact",
@@ -51,12 +76,12 @@ function ConfirmyourdetailsForm() {
           name: name,
           mobile: phoneNumber,
           email: email,
-          companyName:companyName,
-          website:website,
-          companySite:companySite,
-          industry:industry,
-          des:des,
-          Kind:kind
+          companyName: companyName,
+          website: website,
+          companySite: companySite,
+          industry: industry,
+          des: des,
+          Kind: kind,
         },
       }).then((res) => {
         console.log(res);
@@ -64,27 +89,27 @@ function ConfirmyourdetailsForm() {
     }
   };
   return (
-    <div className="ConfirmyourdetailsForm">
+    <div className={currentLocal.language==="العربيه"?"text-right ConfirmyourdetailsForm arConfirmyourdetailsForm":"ConfirmyourdetailsForm"}>
       <Container>
         <div className="title">
-          <h2>Confirm your details</h2>
+          <h2>{currentLocal.meeting.Confirmation}</h2>
         </div>
         <div className="form">
           <form onSubmit={sendData}>
             <p>
-              i want a meeting with tasc expert on
+              {currentLocal.meeting.wantameeting}
               <span>
                 {" "}
-                8 Dec 2021, {localStorage.getItem("bookingTime")}
+                {bookingDate} {localStorage.getItem("bookingTime")}
                 {localStorage.getItem("bookingTime") > "12.00" ? "PM" : "AM"}
               </span>
             </p>
             {alert && (
-            <Alert variant={"danger"}>Please fill all fields</Alert>
-          )}
+              <Alert variant={"danger"}>{currentLocal.meeting.alert}</Alert>
+            )}
             <Row>
               <Col md={6} xs={12}>
-                <label>Name</label>
+                <label>{currentLocal.contactus.name}</label>
                 <input
                   className="name w-100 input"
                   id="name"
@@ -93,7 +118,7 @@ function ConfirmyourdetailsForm() {
                 />
               </Col>
               <Col md={6} xs={12}>
-                <label>Email</label>
+                <label>{currentLocal.registration.email}</label>
 
                 <input
                   className="email w-100 input"
@@ -105,7 +130,7 @@ function ConfirmyourdetailsForm() {
             </Row>
             <Row>
               <Col md={6} xs={12}>
-                <label>Phone Number</label>
+                <label>{currentLocal.registration.mobileNumber}</label>
                 <input
                   className="phone w-100 input"
                   id="phoneNumber"
@@ -114,7 +139,7 @@ function ConfirmyourdetailsForm() {
                 />
               </Col>
               <Col md={6} xs={12}>
-                <label>company Name</label>
+                <label>{currentLocal.registration.companyName}</label>
 
                 <input
                   className="companyName w-100 input"
@@ -126,7 +151,7 @@ function ConfirmyourdetailsForm() {
             </Row>
             <Row>
               <Col md={6} xs={12}>
-                <label>website</label>
+                <label>{currentLocal.meeting.Website}</label>
                 <input
                   className="website w-100 input"
                   id="website"
@@ -135,7 +160,7 @@ function ConfirmyourdetailsForm() {
                 />
               </Col>
               <Col md={6} xs={12}>
-                <label>Company website</label>
+                <label>{currentLocal.meeting.companyWebsite}</label>
 
                 <input
                   className="Companywebsite w-100 input"
@@ -147,7 +172,7 @@ function ConfirmyourdetailsForm() {
             </Row>
             <Row>
               <Col md={12} xs={12}>
-                <label> Your Industry</label>
+                <label> {currentLocal.meeting.yourIndustry}</label>
                 <textarea
                   className="Industry w-100 input"
                   id="Industry"
@@ -158,7 +183,7 @@ function ConfirmyourdetailsForm() {
             </Row>
             <Row>
               <Col md={12} xs={12}>
-                <label> Describe Your Needs:</label>
+                <label> {currentLocal.meeting.describeYourNeeds}</label>
                 <textarea
                   className="des w-100 textarea"
                   id="des"
@@ -170,7 +195,7 @@ function ConfirmyourdetailsForm() {
             </Row>
             <Row>
               <p>
-                Who Is It For ?
+                {currentLocal.meeting.WhoIsItFor}
                 <ul>
                   <li>
                     <input
@@ -180,7 +205,7 @@ function ConfirmyourdetailsForm() {
                       value="My Company"
                       onChange={getData}
                     />
-                    My Company
+                    {currentLocal.meeting.MyCompany}
                   </li>
                   <li>
                     <input
@@ -190,7 +215,7 @@ function ConfirmyourdetailsForm() {
                       value="Other"
                       onChange={getData}
                     />
-                    Other
+                    {currentLocal.meeting.Other}
                   </li>
                   <li>
                     <input
@@ -200,14 +225,16 @@ function ConfirmyourdetailsForm() {
                       onChange={getData}
                       value=" One of my Customers"
                     />
-                    One of my Customers
+                    {currentLocal.meeting.OneofmyCustomers}
                   </li>
                 </ul>
               </p>
             </Row>
             <Row>
               <div className="button text-center">
-                <button type="submit">Confirm Appointment</button>
+                <button type="submit">
+                  {currentLocal.meeting.ConfirmAppointment}
+                </button>
               </div>
             </Row>
           </form>

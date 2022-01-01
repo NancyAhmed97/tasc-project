@@ -1,6 +1,18 @@
 .GeneralManager {
   padding: 0px 0 0px 73px;
 }
+.GeneralManager .RightManger
+{
+  position: relative;
+  right: 73px;
+  top: 28px;
+
+}
+.GeneralManager .arGeneralManager div:first-of-type
+{
+ margin-left: 75px;
+ text-align: right;
+}
 .GeneralManager ul {
   display: flex;
   flex-direction: row;

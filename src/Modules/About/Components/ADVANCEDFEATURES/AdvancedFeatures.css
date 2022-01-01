@@ -21,11 +21,25 @@ padding-right: 20px;
 text-align: center;
 
 }
+.AdvancedFeatures .arBox
+{
+border-right: 1px solid gainsboro;
+height:359px ;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding-left: 20px;
+text-align: center;
+
+}
 .AdvancedFeatures .item:last-of-type .text-box
 {
 border-right: none;
-
-
+}
+.AdvancedFeatures .item:last-of-type .arBox
+{
+border-left: none;
 }
 .AdvancedFeatures .img-container
 {

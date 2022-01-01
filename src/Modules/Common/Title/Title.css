@@ -37,23 +37,43 @@
   color: #fff;
   left: 11px;
 }
-.Title .sqare
+.Title .gensqare
 {
     position: relative;
     right: 200px;
     top: 33px;
+    
 }
+.Title .arItgensqare
+{
+    position: relative;
+    left: 130px;
+    top: 33px;
+    
+}
+
 .Title .itsqare
 {
     position: relative;
     right: 229px;
     top: 33px;
 }
-.dark img:last-of-type
+.Title .arItsqare{
+    position: relative;
+    left: 0;
+    top: 33px;
+}
+.dark .sqare
 {
     position: relative;
     right: 230px;
     top: 35px;
+}
+.Title .arsqare
+{
+    position: relative;
+    left:90px !important;
+    top: 33px;
 }
 @media only screen and (max-width: 768px) {
     .Title h1 {

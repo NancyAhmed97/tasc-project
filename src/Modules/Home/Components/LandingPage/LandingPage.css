@@ -8,6 +8,10 @@
 
 
 }
+.landingPage .Ar
+{
+	text-align: right;
+}
 
 .landingPage .light{
 	font-family: 'Gotham';

@@ -3,8 +3,10 @@ import { Container } from "react-bootstrap";
 import Wrong from "../../../../Resources/Assets/Union 7.svg";
 import right from "../../../../Resources/Assets/Icon awesome-check.svg";
 import "./ApplicationPrices.css";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 function ApplicationPrices() {
+  const { currentLocal } = useSelector((state) => state.currentLocal);
   const [priceState, setPriceState] = useState("Application");
   const transparetState = (e) => {
     setPriceState(e.target.id);
@@ -21,16 +23,16 @@ function ApplicationPrices() {
               id="Application"
               onClick={transparetState}
             >
-              Application Prices
+              {currentLocal.pricing.applicationPrices}
             </div>
             <div
               className={
-                priceState === "Implementation" ? "active " : "Implementation"
+                priceState === "Implementation" ? "active pr-3" : "Implementation pr-3"
               }
               id="Implementation"
               onClick={transparetState}
             >
-              Implementation Prices
+              {currentLocal.pricing.implementationPrices}
             </div>
           </div>
           <h2 className="py-5">
@@ -154,7 +156,7 @@ function ApplicationPrices() {
               </td>{" "}
             </tr>
             <tr>
-              <td className= {priceState === "Implementation"&&"py-2"}>
+              <td className={priceState === "Implementation" && "py-2"}>
                 {priceState === "Application"
                   ? " Accounts Receivable  "
                   : "Data Importation Assistance"}
@@ -174,26 +176,32 @@ function ApplicationPrices() {
               </td>
             </tr>
             <tr>
-              <td className= {priceState === "Implementation"&&"AppCustomization"}>
+              <td
+                className={
+                  priceState === "Implementation" && "AppCustomization"
+                }
+              >
                 {priceState === "Application"
                   ? " Bank & Printing Checks    "
                   : "App Customization"}
               </td>
-              <td className= {priceState === "Implementation"&&"emptyCell"}>
+              <td className={priceState === "Implementation" && "emptyCell"}>
                 {priceState === "Application" ? (
                   <img src={Wrong} alt="Wrong" />
                 ) : (
                   ""
                 )}
               </td>
-              <td className= {priceState === "Implementation"&&"emptyCell"}>
+              <td className={priceState === "Implementation" && "emptyCell"}>
                 {priceState === "Application" ? (
                   <img src={right} alt="right" />
                 ) : (
                   ""
                 )}
               </td>
-              <td className= {priceState === "Implementation"&&"lastEmptyCell"}>
+              <td
+                className={priceState === "Implementation" && "lastEmptyCell"}
+              >
                 {priceState === "Application" ? (
                   <img src={right} alt="right" />
                 ) : (
@@ -247,18 +255,17 @@ function ApplicationPrices() {
             </tr>
           </table>
         </div>
-        <ul>
-          <li>The system monitors the entire supply process.</li>
-          <li>Makes sure that the medicines are “not adulterated”.</li>
-          <li>
-            Provides reliable data regarding the Medicines used in fraud and
-            their sources.
-          </li>
+        <ul className={currentLocal.language==="العربيه"&&"text-right"}>
+          <li>{currentLocal.pricing.firstPrice}</li>
+          <li>{currentLocal.pricing.secondPrice}</li>
+          <li>{currentLocal.pricing.thirdPrice}</li>
         </ul>
-        <div className="button">
-          <button>
-            <Link to="/meeting">Contact our expert</Link>
+        <div className="button ">
+        <Link to="/meeting">
+          <button className="text-white">
+            {currentLocal.home.contactOurExpert}
           </button>
+          </Link>
         </div>
       </Container>
     </div>

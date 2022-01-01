@@ -1,25 +1,38 @@
-import React from 'react'
-import { Col, Container, Row } from 'react-bootstrap'
-import Title from '../../../Common/Title/Title'
-import "./AccountingManager.css"
+import React from "react";
+import { Col, Container, Row } from "react-bootstrap";
+import Title from "../../../Common/Title/Title";
+import { useSelector } from "react-redux";
+import "./AccountingManager.css";
 function AccountingManager() {
-    return (
-        <div className='AccountingManager'>
-<Container>
-    <Row>
-<Col md={6}xs={12}></Col>
-<Col md={6}xs={12} className='textContainer'>
-<Title  title="Accounting Manager"/>
-{/* <ul className="mt-5"> */}
-    <li><span>You can construct any type of report you need using our report architecture module.</span></li>
-    <li><span>All data entry must be given approval by the account manager and then can be added to the database.</span></li>
-    <li><span>The user interface is designed keeping in mind the time and energy cost for the entry process.</span></li>
-{/* </ul> */}
-</Col>
+    const { currentLocal } = useSelector((state) => state.currentLocal);
+  return (
+    <div className={currentLocal.language==="English"?"AccountingManager":"arAccountingManager"}>
+      <Container>
+        <Row>
+          <Col md={6} xs={12}></Col>
+          <Col md={6} xs={12} className="textContainer">
+            <Title title={currentLocal.home.AccountingManager} />
+            <li>
+              <span>
+                {currentLocal.home.firstAccount}
+              </span>
+            </li>
+            <li>
+              <span>
+              {currentLocal.home.secondAccount}
+              </span>
+            </li>
+            <li>
+              <span>
+              {currentLocal.home.thirdAccound}
+
+              </span>
+            </li>
+          </Col>
         </Row>
-</Container>
-        </div>
-    )
+      </Container>
+    </div>
+  );
 }
 
-export default AccountingManager
+export default AccountingManager;

@@ -7,7 +7,7 @@ function GetInTouchInfo() {
   const { currentLocal } = useSelector((state) => state.currentLocal);
   return (
     <div className="GetInTouchInfo">
-      <div className="title">
+      <div className={currentLocal.language==="English"?"title":"title arTitle"}>
         <h2> {currentLocal.contactus.touch}</h2>
       </div>
       <ul className="p-0">

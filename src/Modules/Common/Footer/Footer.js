@@ -13,8 +13,9 @@ import "./Footer.css";
 import { Link } from "react-router-dom";
 function Footer({ activeState }) {
   const dispatch = useDispatch();
-	const { currentLocal } = useSelector((state) => state.currentLocal);
+  const { currentLocal } = useSelector((state) => state.currentLocal);
   const [visible, setIsVisible] = useState(false);
+  const [lang, setLang] = useState("")
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -24,7 +25,6 @@ function Footer({ activeState }) {
   };
 
   useEffect(() => {
-    // Button is displayed after scrolling for 500 pixels
     const toggleVisibility = () => {
       if (window.pageYOffset > 500) {
         setIsVisible(true);
@@ -42,7 +42,12 @@ function Footer({ activeState }) {
     <footer className="footer">
       <Container fluid>
         <Row>
-          <Col md="6" xs={12} style={{ position: "relative" }}>
+          <Col
+            md="6"
+            xs={12}
+            style={{ position: "relative" }}
+            className={currentLocal.language === "العربيه" && "text-right"}
+          >
             <div className="footer-img">
               <Link to="/">
                 <img src={FooterLogo} alt="FooterLogo" />
@@ -57,16 +62,14 @@ function Footer({ activeState }) {
               </p>
             </div>
           </Col>
-          <Col md="4" xs={12}>
+          <Col
+            md="4"
+            xs={12}
+            className={currentLocal.language === "العربيه" && "text-right"}
+          >
             <div className="footer-links">
               <div className="mt-3">
                 <ul>
-                  {/* <li className={activeState==="home"?"active text-white ":"text-white "}>
-                    <Link to="/"   className={activeState==="home"?"text-white ":"text-white px-3"}>
-                      Home
-                    </Link>
-                  </li> */}
-
                   <li
                     className={
                       activeState === "about"
@@ -77,19 +80,13 @@ function Footer({ activeState }) {
                     <Link
                       to="/aboutus"
                       className={
-                        activeState === "about"
-                          ? "text-white "
-                          : "text-white px-3"
+                        activeState === "about" ? "text-white " : "text-white "
                       }
                     >
-                      About us
+                      {currentLocal.navbar.aboutus}{" "}
                     </Link>
                   </li>
-                  {/* <li className={activeState==="home"?"active text-white mt-3":"text-white mt-3"}>
-                    <Link to="/services" className={activeState==="home"?"text-white ":"text-white px-3"}>
-                    Services
-                                        </Link>
-                  </li> */}
+
                   <li
                     className={
                       activeState === "blog"
@@ -105,7 +102,7 @@ function Footer({ activeState }) {
                           : "text-white px-3"
                       }
                     >
-                      Blog
+                      {currentLocal.navbar.blog}
                     </Link>
                   </li>
                 </ul>
@@ -127,7 +124,7 @@ function Footer({ activeState }) {
                           : "text-white px-3"
                       }
                     >
-                      Pricing
+                      {currentLocal.navbar.pricing}
                     </Link>
                   </li>
                   <li
@@ -142,17 +139,25 @@ function Footer({ activeState }) {
                       className={
                         activeState === "contact"
                           ? "text-white "
-                          : "text-white px-3"
+                          : "text-white "
                       }
                     >
-                      Contact us
+                      {currentLocal.navbar.contactus}
                     </Link>
                   </li>
                 </ul>
               </div>
             </div>
           </Col>
-          <Col md="2" xs={12} className="social-medoiaCol">
+          <Col
+            md="2"
+            xs={12}
+            className={
+              currentLocal.language === "العربيه"
+                ? " arSocial-medoiaCol"
+                : "social-medoiaCol"
+            }
+          >
             <ul className="social-medoia ">
               <li className="d-inline-block facebook">
                 <a
@@ -191,27 +196,26 @@ function Footer({ activeState }) {
                 >
                   <div>
                     <img src={langIcon} alt="langIcon" />
-                    {/* {lang ? lang : "English"} */}
-                    English
+                    {lang ? lang : "English"}
+                    {/* {currentLocal.language} */}
                   </div>
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu>
                   <Dropdown.Item
-                    onClick={() => {
+                    onClick={(e) => {
                       dispatch(
                         changeLocal(
                           currentLocal.language === "English" ? "ar" : "en"
                         )
                       );
+                      setLang(e.target.id);
+                      console.log(e.target.id);
+
                     }}
                     id="Arabic"
-                    // onClick={(e) => {
-                    //   setLang(e.target.id);
-                    // }}
                   >
-                    Arabic
-                    {/* {lang ?"English" :lang } */}
+                    {lang?"English" :lang }
                   </Dropdown.Item>
                 </Dropdown.Menu>
               </Dropdown>

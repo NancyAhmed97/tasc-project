@@ -1,19 +1,21 @@
 import React from "react";
 import { Container } from "react-bootstrap";
+import { useSelector } from "react-redux";
 import "./MeetngDetails.css";
 function MeetngDetails() {
+  const { currentLocal } = useSelector((state) => state.currentLocal);
   return (
     <div className="MeetngDetails">
       <Container>
         <div className="py-5">
-          <h2>i want a meeting with tasc expert at</h2>
-          <p><span>Duration&nbsp; :</span>1 hour</p>
-          <p>Schedule a 1-hour free meeting with an expert, to get:</p>
+          <h2>{currentLocal.meeting.meeting}</h2>
+          <p>{currentLocal.meeting.direction}</p>
+          <p>{currentLocal.meeting.meetingDetails}</p>
           <ul>
-            <li>a tailored demonstration</li>
-            <li>recommendations based on your needs</li>
-            <li>answers to your questions about Odoo</li>
-            <li>information about pricing & methodology</li>
+            <li>{currentLocal.meeting.firstRole}</li>
+            <li>{currentLocal.meeting.secondRole}</li>
+            <li>{currentLocal.meeting.thirdRole}</li>
+            <li>{currentLocal.meeting.fouethRole}</li>
           </ul>
         </div>
       </Container>

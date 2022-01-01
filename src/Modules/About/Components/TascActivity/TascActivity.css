@@ -9,10 +9,26 @@
   height: 610px;
   /* height: fit-content; */
 }
+.arTascActivity{
+  background-image: url("../../../../Resources/Assets/RightAbout.png");
+  background-attachment: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* width: 1286px !important; */
+  background-position-x: left;
+  margin-right: 114px;
+  height: 610px;
+  /* height: fit-content; */
+}
 .TascActivity .activityContent {
   position: absolute;
   top: 115px;
   left: 50px;
+}
+.TascActivity .aractivityContent {
+  position: absolute;
+  top: 115px;
+  right: 38px;
 }
 .TascActivity .title h2 {
   display: flex;
@@ -38,13 +54,31 @@
   color: white;
   margin-bottom: 40px;
 }
+.TascActivity .aractivityContent h2 {
+  font-family: "Poppins";
+  font-size: 30;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 40px;
+}
 .TascActivity .activityContent p:first-of-type {
   font-family: "Poppins";
   font-size: 18;
   color: #4eaee5;
   margin-bottom: 24px;
 }
+.TascActivity .aractivityContent p:first-of-type {
+  font-family: "Poppins";
+  font-size: 18;
+  color: #4eaee5;
+  margin-bottom: 24px;
+}
 .TascActivity .activityContent p:last-of-type {
+  font-family: "Poppins";
+  font-size: 18;
+  color: #fff;
+}
+.TascActivity .aractivityContent p:last-of-type {
   font-family: "Poppins";
   font-size: 18;
   color: #fff;
@@ -60,7 +94,25 @@
   left: -11px;
   height: 230px;
 }
+.TascActivity .arDevelopmentContent {
+  background-color: #fff;
+  width: 582px;
+  padding-top: 25px;
+  padding-bottom: 30px;
+  padding-right: 35px;
+  box-shadow: rgba(44, 44, 212, 0.2) 0px 3px 30px 0px;
+  position: absolute;
+  left: -11px;
+  height: 230px;
+  padding-left: 25px;
+}
 .TascActivity .DevelopmentContent h2 {
+  font-family: "Poppins";
+  font-size: 18px;
+  color: #426b87;
+  font-weight: 600;
+}
+.TascActivity .arDevelopmentContent h2 {
   font-family: "Poppins";
   font-size: 18px;
   color: #426b87;
@@ -68,6 +120,11 @@
 }
 
 .TascActivity .DevelopmentContent p {
+  font-family: "Open Sans";
+  font-size: 16;
+  opacity: 0.67;
+}
+.TascActivity .arDevelopmentContent p {
   font-family: "Open Sans";
   font-size: 16;
   opacity: 0.67;
@@ -99,6 +156,12 @@
     top: 240px;
     padding-left: 16px;
   }
+  .TascActivity .arDevelopmentContent {
+    width: 103%;
+    height: fit-content;
+    top: 240px;
+    padding-left: 16px;
+  }
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .TascActivity {
@@ -114,6 +177,12 @@
   }
 
   .TascActivity .DevelopmentContent {
+    width: auto;
+
+    height: fit-content;
+    top: 376px;
+  }
+  .TascActivity .arDevelopmentContent {
     width: auto;
 
     height: fit-content;
