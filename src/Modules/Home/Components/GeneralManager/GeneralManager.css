@@ -43,11 +43,31 @@
   margin-right: 75px;
 }
 
+.arGeneralManager{
+  padding: 0;
+  margin: 0;
+}
+.arGeneralManager .Title
+{
+  margin-right: 60px;
+}
+
 @media only screen and (max-width: 768px) {
   .GeneralManager {
     padding: 0 0px 50px 15px;
     position: relative;
     top: 35px;
+  }
+  .GeneralManager .arGeneralManager div{
+    margin-right: 0 !important;
+  }
+  .GeneralManager .arabic .Title .dark{
+    position: relative;
+    bottom: 46px;
+    right: 22px !important;
+    font-size: 18px;
+    color: #426B87;
+    font-family: 'Poppins', sans-serif;
   }
   .GeneralManager ul li {
     padding-left: 0px;
@@ -66,6 +86,13 @@
   .GeneralManager .GeneralManagerImg {
     height: 500px;
   }
+  .GeneralManager .RightManger
+{
+  position: relative;
+  right: 15px;
+  top: 35px;
+
+}
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .GeneralManager {
@@ -81,8 +108,21 @@
   .GeneralManager ul div:first-of-type li:last-of-type {
     margin-bottom: 30px;
   }
+  .GeneralManager ul div:last-of-type{  
+  margin-left: 75px;
+text-align: right;
+margin-right: 75px;
+}
   .GeneralManager ul li:first-of-type {
     width: 300px;
     margin-bottom: 25px;
   }
+  .GeneralManager .RightManger
+{
+  position: relative !important;
+  left: 15px !important;
+  right: 0;
+  top: 35px;
+
+}
 }

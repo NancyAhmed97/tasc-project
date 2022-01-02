@@ -199,7 +199,9 @@ export const en = {
    MyCompany:"My Company",
    Other:" Other",
    OneofmyCustomers:"One of my Customers",
-   ConfirmAppointment:"Confirm Appointment"
+   ConfirmAppointment:"Confirm Appointment",
+   leasechooseyouravalibletime:"please choose your avalible time",
+   pleasechooseyouravalibleday:"please choose your avalible day",
 
   },
   post:{

@@ -27,7 +27,9 @@ function ApplicationPrices() {
             </div>
             <div
               className={
-                priceState === "Implementation" ? "active pr-3" : "Implementation pr-3"
+                priceState === "Implementation"
+                  ? "active pr-3"
+                  : "Implementation pr-3"
               }
               id="Implementation"
               onClick={transparetState}
@@ -37,8 +39,8 @@ function ApplicationPrices() {
           </div>
           <h2 className="py-5">
             {priceState === "Application"
-              ? "Application Prices"
-              : "Implementation Prices"}
+              ? currentLocal.pricing.applicationPrices
+              : currentLocal.pricing.implementationPrices}
           </h2>
         </div>
 
@@ -255,16 +257,16 @@ function ApplicationPrices() {
             </tr>
           </table>
         </div>
-        <ul className={currentLocal.language==="العربيه"&&"text-right"}>
+        <ul className={currentLocal.language === "العربيه" && "text-right"}>
           <li>{currentLocal.pricing.firstPrice}</li>
           <li>{currentLocal.pricing.secondPrice}</li>
           <li>{currentLocal.pricing.thirdPrice}</li>
         </ul>
         <div className="button ">
-        <Link to="/meeting">
-          <button className="text-white">
-            {currentLocal.home.contactOurExpert}
-          </button>
+          <Link to="/meeting">
+            <button className="text-white">
+              {currentLocal.home.contactOurExpert}
+            </button>
           </Link>
         </div>
       </Container>

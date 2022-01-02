@@ -66,6 +66,13 @@ color: #000000;}
     position: absolute;
     right: 70%;
   }
+  .sdp--date-btn__selected{
+    background-color: #426B87;
+    border-radius: 4px;
+    width: 50px;
+    color: #fff !important;
+    height: 27px;
+}
 
 }
 
@@ -73,10 +80,21 @@ color: #000000;}
   .sdp--month-picker button:first-of-type {
     position: absolute;
     right: 47%;
+    margin-right: 25px;
+
   }
+  .sdp--date-btn__selected{
+    background-color: #426B87;
+    border-radius: 4px;
+    width: 50px;
+    color: #fff !important;
+    height: 27px;
+}
+
   .sdp--month-picker button:last-of-type {
     position: absolute;
     right: 42%;
+
   }
 
 }

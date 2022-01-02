@@ -195,6 +195,15 @@ top: 6px;}
 }
 @media only screen and (max-width: 768px) {
 
+  .ApplicationPrices .text-right li:last-of-type {
+    width: 100%;
+  }
+  .ApplicationPrices .text-right li:first-of-type {
+    width: 60%;
+  }
+  .ApplicationPrices .text-right li {
+    width: 60%;
+  }
   .ApplicationPrices ul
   {
     padding: 0;
@@ -259,5 +268,15 @@ font-size: 12px;
     font-weight: 400;
     font-family: "Gotham";
     color: #426b87;
+  }
+  
+  .ApplicationPrices .text-right li:last-of-type {
+    width: 57%;
+  }
+  .ApplicationPrices .text-right li:first-of-type {
+    width: 33%;
+  }
+  .ApplicationPrices .text-right li {
+    width: 32%;
   }
 }

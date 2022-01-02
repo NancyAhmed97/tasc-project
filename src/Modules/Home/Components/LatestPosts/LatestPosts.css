@@ -17,13 +17,11 @@
   text-decoration: none;
 }
 .LatestPosts a::after {
-  content: url("../../../../Resources/Assets/right-arrow.svg");
   margin-left: 8px;
   margin-top: 5px;
   display: inline-block;
 }
 .LatestPosts .text-right a::after {
-  content: url("../../../../Resources/Assets/Icon feather-arrow-right.svg");
   margin-right: 8px;
   margin-top: 5px;
   display: inline-block;
@@ -39,6 +37,7 @@
   right: 9%;
   top: 44%;
 }
+
 .LatestPosts .textContainer p {
   margin: 0px;
 }
@@ -128,6 +127,11 @@
     left: 15%;
     top: 55%;
   }
+  .LatestPosts .text-right .textContainer {
+    position: absolute;
+    right: 9%;
+    top: 44%;
+}
   .latest-posts-section__accordion__img.img-1[data-v-d078e6ae] {
 
     flex: 15;
@@ -162,6 +166,21 @@
   }
 } 
 @media only screen and (max-width: 768px) {
+  .LatestPosts .text-right .textContainer
+{
+  position: absolute !important;
+  top: 44%;
+  right:12%;
+
+}
+.LatestPosts .text-right .textContainer .titlePragraph
+{
+  width: 89%;
+}
+.LatestPosts .text-right .textContainer .text-post
+{
+  width: 60%;
+}
   .latest-posts-section__accordion
   {
     display: flex;

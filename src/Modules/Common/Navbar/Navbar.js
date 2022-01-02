@@ -12,11 +12,12 @@ import { changeLocal } from "../../../Redux/Localization";
 function Navbarr({activeState,activePage}) {
   const dispatch = useDispatch();
   const { currentLocal } = useSelector((state) => state.currentLocal);
+  console.log(activeState);
   return (
 
 
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" className={activePage?"lightNavbar":"navbar "}>
-      <Container>
+      <Container className={currentLocal.language==="العربيه"&&"arcontainer"}>
         <Navbar.Brand href="/"> <img src={activePage?LightLogo:logo} alt="logo-img" /></Navbar.Brand>
         {activePage !=="login"?
           <>

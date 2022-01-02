@@ -32,7 +32,6 @@ function ITManager() {
           </Col>
         </Row>
       </Container>
-      {/* <Title title="IT Manager" /> */}
     </div>
   );
 }

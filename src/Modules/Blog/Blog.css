@@ -39,7 +39,7 @@ height: 5px;
     display: none;
  
     }
-    .blog .arblogPargraph::before{
+    .blog .arblogPargraph::after{
         display: none;
     }
 }

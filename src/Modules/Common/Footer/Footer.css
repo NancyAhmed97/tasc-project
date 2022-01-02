@@ -115,6 +115,10 @@ bottom: 38px;
 .footer .row{
 	position: relative;
 }
+.footer .dropdown-menu
+{
+  background-color: #F9FBFD;
+}
 .footer .social-medoiaCol{
 	position: absolute;
 	right: 0px;
@@ -159,6 +163,14 @@ margin-left: 57px;
 top: 8px;
 left: 4px;
 }
+.footer .text-right .active::before
+{
+	content: url("../../../Resources/Path 10840.svg");
+	display: inline-block;
+	position: relative;
+	top: 10px;
+	left: 4px;
+}
 
 @media only screen and (max-width: 768px) {
 	.footer .footer-img p{
@@ -166,6 +178,9 @@ left: 4px;
 		padding-right: 20px;
 	
 	}
+	footer .text-right .footer-links ul li{
+		font-size: 14px;
+	} 
 	.footer .footer-links
 	{
 	
@@ -191,8 +206,6 @@ padding-left: 0;
 .footer .footer-img,.footer .social-medoiaCol {
     position: static;
 	margin-top: 20px;
-
-
 }
 
 
@@ -202,11 +215,36 @@ padding-left: 0;
 	padding-left: 20px;
 padding-right: 80px;
 }
+
 	.footer .footer-links
 	{
 	
 		justify-content: flex-start;
 		margin-top: 2.6rem;
+	}
+	.arfooter .footer-links
+	{
+		justify-content: flex-end;
+
+	}
+	.arfooter .footer-links ul li a
+	{
+
+		font-size: 12px !important;
+	}
+	.arfooter .text-right .footer-links > div:first-of-type
+	{
+		margin-left: 0;
+	}
+	.arfooter .footer-links ul
+	{
+		margin: 0;
+		padding: 0;
+	}
+	.arfooter .footer-links ul:first-of-type
+	{
+		margin-left:15px;
+	
 	}
 	.footer .arrow
 	{

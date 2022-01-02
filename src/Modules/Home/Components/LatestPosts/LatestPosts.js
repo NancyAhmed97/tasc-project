@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
+import arrowRight from "../../../../Resources/Assets/right-arrow.svg";
 import "./LatestPosts.css";
 function LatestPosts() {
   const [changeFirstText, setChangeFirstText] = useState(false);
@@ -36,12 +37,21 @@ function LatestPosts() {
                     {currentLocal.home.beYourself}{" "}
                   </p>
                   <p className="text-post">
-                    Aenean imperdiet dignissim pulvinar. Nullam faucibus nibh at
-                    egestas dignissim. Nunc euismod fringilla nisl, vitae
-                    efficitur arcu sagittis
+                  {currentLocal.post.firstPragraph}
+
                   </p>
                   <Link to="/postdetails" className="text-white">
-                  {currentLocal.home.viewpost}
+                  {currentLocal.language === "English" ? (
+              <>
+                {currentLocal.home.viewpost}{" "}
+                <img src={arrowRight} alt="arrowRight" />
+              </>
+            ) : (
+              <>
+                <img src={arrowRight} alt="arrowRight" />{" "}
+                {currentLocal.home.viewpost}
+              </>
+            )}
                   </Link>
                 </div>
               </>
@@ -70,12 +80,21 @@ function LatestPosts() {
                     {currentLocal.home.beYourself}{" "}
                   </p>
                   <p className="text-post">
-                    Aenean imperdiet dignissim pulvinar. Nullam faucibus nibh at
-                    egestas dignissim. Nunc euismod fringilla nisl, vitae
-                    efficitur arcu sagittis
+                  {currentLocal.post.firstPragraph}
+
                   </p>
                   <Link to="/postdetails" className="text-white">
-                    {currentLocal.home.viewpost}
+                  {currentLocal.language === "English" ? (
+              <>
+                {currentLocal.home.viewpost}{" "}
+                <img src={arrowRight} alt="arrowRight" />
+              </>
+            ) : (
+              <>
+                <img src={arrowRight} alt="arrowRight" />{" "}
+                {currentLocal.home.viewpost}
+              </>
+            )}
                   </Link>
                 </div>
               </>
@@ -106,12 +125,20 @@ function LatestPosts() {
                     {currentLocal.home.beYourself}{" "}
                   </p>
                   <p className="text-post">
-                    Aenean imperdiet dignissim pulvinar. Nullam faucibus nibh at
-                    egestas dignissim. Nunc euismod fringilla nisl, vitae
-                    efficitur arcu sagittis
+                   {currentLocal.post.firstPragraph}
                   </p>
                   <Link to="/postdetails" className="text-white">
-                  {currentLocal.home.viewpost}
+                  {currentLocal.language === "English" ? (
+              <>
+                {currentLocal.home.viewpost}{" "}
+                <img src={arrowRight} alt="arrowRight" />
+              </>
+            ) : (
+              <>
+                <img src={arrowRight} alt="arrowRight" />{" "}
+                {currentLocal.home.viewpost}
+              </>
+            )}
                   </Link>
                 </div>
               </>

@@ -6,14 +6,8 @@ import DatePicker from "sassy-datepicker";
 import "./ScheduleCalender.css";
 function ScheduleCalender({bookingDateState}) {
   const { currentLocal } = useSelector((state) => state.currentLocal);
-  // const [day, setDay] = useState("")
-  // const [year, setYear] = useState("")
-  // const [mon, setMon] = useState("")
   const onChange = (date) => {
-    // setDay(date.toString().slice(8,10))
-    // setYear(date.toString().slice(11,16))
-    // setMon(date.toString().slice(4,7))
-    // const bookingDate=day+mon+year
+
     bookingDateState(date.toString())
   };
 

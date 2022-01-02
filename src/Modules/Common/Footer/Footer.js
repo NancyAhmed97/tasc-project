@@ -11,11 +11,12 @@ import { changeLocal } from "../../../Redux/Localization";
 
 import "./Footer.css";
 import { Link } from "react-router-dom";
+import axios from "axios";
 function Footer({ activeState }) {
   const dispatch = useDispatch();
   const { currentLocal } = useSelector((state) => state.currentLocal);
   const [visible, setIsVisible] = useState(false);
-  const [lang, setLang] = useState("")
+  // const [lang, setLang] = useState("");
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -25,6 +26,19 @@ function Footer({ activeState }) {
   };
 
   useEffect(() => {
+    //  axios({
+    //     method: "get",
+    //     url: "https://tascerp.com/api/v1/languages",
+    //   }).then((res) => {
+    //     console.log(res);
+    //   });
+    axios
+      .get(`https://tascerp.com/api/v1/languages`)
+      .then((res) => {
+        console.log(`Returned album data from the server: ${res}`);
+      })
+      .catch((err) => console.log(err));
+
     const toggleVisibility = () => {
       if (window.pageYOffset > 500) {
         setIsVisible(true);
@@ -39,11 +53,12 @@ function Footer({ activeState }) {
   }, []);
 
   return (
-    <footer className="footer">
+    <footer className={currentLocal.language==="العربيه"?"footer arfooter":"footer"}>
       <Container fluid>
         <Row>
           <Col
-            md="6"
+          lg={6}
+            md="5"
             xs={12}
             style={{ position: "relative" }}
             className={currentLocal.language === "العربيه" && "text-right"}
@@ -53,17 +68,14 @@ function Footer({ activeState }) {
                 <img src={FooterLogo} alt="FooterLogo" />
               </Link>
               <p>
-                Aenean imperdiet dignissim pulvinar. Nullam faucibus nibh at
-                egestas dignissim. Nunc euismod fringilla nisl, vitae efficitur
-                arcu sagittis nec. Nam placerat nec felis id interdum. Morbi
-                lacinia, ex vel porttitor aliquam, ante ligula suscipit est, et
-                euismod nibh ante eu justo. Nunc euismod fringilla nisl, vitae
-                efficitur arcu sagittis nec.
+              {currentLocal.post.firstPragraph}
+
               </p>
             </div>
           </Col>
           <Col
-            md="4"
+          lg={4}
+            md="3"
             xs={12}
             className={currentLocal.language === "العربيه" && "text-right"}
           >
@@ -150,7 +162,8 @@ function Footer({ activeState }) {
             </div>
           </Col>
           <Col
-            md="2"
+          lg={2}
+            md="4"
             xs={12}
             className={
               currentLocal.language === "العربيه"
@@ -196,7 +209,7 @@ function Footer({ activeState }) {
                 >
                   <div>
                     <img src={langIcon} alt="langIcon" />
-                    {lang ? lang : "English"}
+English
                     {/* {currentLocal.language} */}
                   </div>
                 </Dropdown.Toggle>
@@ -209,13 +222,12 @@ function Footer({ activeState }) {
                           currentLocal.language === "English" ? "ar" : "en"
                         )
                       );
-                      setLang(e.target.id);
+                      // setLang(e.target.id);
                       console.log(e.target.id);
-
                     }}
                     id="Arabic"
                   >
-                    {lang?"English" :lang }
+Arabic
                   </Dropdown.Item>
                 </Dropdown.Menu>
               </Dropdown>

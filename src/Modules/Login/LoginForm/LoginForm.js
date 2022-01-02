@@ -1,10 +1,10 @@
 import axios from "axios";
 import React, { useState } from "react";
-import { Alert, Col, Container, Form, Row } from "react-bootstrap";
+import { Alert, Col, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import passSeen from "../../../Resources/Assets/Group 6489.svg";
-import img from "../../../Resources/Assets/Group 6026.png"
+import img from "../../../Resources/Assets/Group 6026.png";
 import "./LoginForm.css";
 function LoginForm() {
   const [passSeenState, setPassSeenState] = useState("password");
@@ -29,9 +29,9 @@ function LoginForm() {
         method: "post",
         url: "http://localhost:8000/api/v1/login",
         data: {
-          userName: userName,
+          name: userName,
           password: pass,
-          rememberMe:rememberMe
+          rememberMe: rememberMe,
         },
       }).then((res) => {
         console.log(res);
@@ -43,26 +43,36 @@ function LoginForm() {
       setUserName(e.target.value);
     } else if (e.target.id === "password") {
       setPass(e.target.value);
-    }else if(e.target.id==="Remember"){
-      setRememberMe(e.target.value)
+    } else if (e.target.id === "Remember") {
+      setRememberMe(e.target.value);
     }
   };
 
   return (
-    <div className="login">
+    <div className={currentLocal.language==="العربيه"?"login arlogin":"login"}>
       <Container>
-        <div className="LoginContainer">
-          <Row className="h-100">
-            <Col md={6} xs={12}>
+        <Row>
+          <Col lg={6} md={7} xs={12} className="forgetPassCol">
+            <form onSubmit={sendData} className="forgetPassForm">
+              <div className="form">
               <div className={currentLocal.language==="العربيه"?"text-right formContainer":"formContainer"}>
                 <h4>{currentLocal.login.signin}</h4>
                 <p>
                  {currentLocal.login.loginContent}
                 </p>
-                {alert && (
-                  <Alert className={currentLocal.language==="العربيه"&&"text-right"} variant={"danger"}>*{currentLocal.login.emailIsRequired}</Alert>
-                  )}
-                <Form onSubmit={sendData}>
+                <div className="errorMsg">
+
+                    {alert  && (
+                      <Alert
+                        className={
+                          currentLocal.language === "العربيه" && "text-right"
+                        }
+                        variant={"danger"}
+                      >
+                        *{currentLocal.login.alert}
+                      </Alert>
+                    )}
+                    </div>
                   <label>{currentLocal.login.userName}</label>
                   <input
                     type="text "
@@ -84,7 +94,7 @@ function LoginForm() {
                     className="passSeen"
                     onClick={changePassSeen}
                   />
-                  <Row className=" checkbox">
+                     <Row className=" checkbox">
                     <Col md={6} xd={6}>
                       <input
                         type="checkbox"
@@ -104,25 +114,43 @@ function LoginForm() {
                   </Row>
                   <Row>
                     <Col md={6} xs={6}></Col>
-                    <Col md={6} xs={6} className="forgetPass pb-4">
+                    <Col md={6} xs={6} className="forgetPass pb-2">
                     <Link to="/signup">{currentLocal.login.registerNow}</Link>
 
                     </Col>
                   </Row>
+
                   <Row>
                     <div className="button">
                       <button type="submit">{currentLocal.login.loginNow}</button>
                     </div>
                   </Row>
-                </Form>
+                </div>
               </div>
-            </Col>
-            <Col md={6} xs={12} className="img-container">
-                      <img src={img} alt="img" />
-
-            </Col>
-          </Row>
-        </div>
+              {/* <div className="button text-center">
+                <button type="submit" className="button-primary">
+                  {currentLocal.login.send}
+                </button>
+              </div> */}
+              {/* <div
+                className={
+                  currentLocal.language === "العربيه"
+                    ? "text-right checkAccount"
+                    : "checkAccount"
+                }
+              >
+                <span> {currentLocal.login.RememberYourPassword}</span>
+                <span className="mx-2">
+                  {" "}
+                  <Link to="/login"> {currentLocal.login.signin} </Link>
+                </span>
+              </div> */}
+            </form>
+          </Col>
+          <Col lg={6} md={5} xs={12}>
+            <img src={img} alt="img" />
+          </Col>
+        </Row>
       </Container>
     </div>
   );

@@ -103,4 +103,34 @@ margin-left: 12px;
     font-size: 28px;
     text-transform: uppercase;
     }
+    .Landing-contact
+{
+    background-image: url("../../../Resources/mediaquery.png");
+	background-attachment: bottom;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	height: fit-content;
+    padding-top: 127px;
+    padding-bottom: 127px;
+}
+.Landing-pricing
+{
+    background-image: url("../../../Resources/pricingMediaQuery.png");
+	background-attachment: bottom;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	height: fit-content;
+    padding-top: 127px;
+    padding-bottom: 127px;
+}
+.LandingSection
+{
+    background-image: url("../../../Resources/aboutMediaQuery.png");
+	background-attachment: bottom;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	height: fit-content;
+    padding-top: 127px;
+    padding-bottom: 127px;
+}
 }

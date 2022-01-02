@@ -195,7 +195,9 @@ export const ar = {
     MyCompany:"شركتي",
     Other:"أخري",
     OneofmyCustomers:"أحد عملائي",
-    ConfirmAppointment:"تأكيد الموعد"
+    ConfirmAppointment:"تأكيد الموعد",
+    pleasechooseyouravalibleday:"برجاء اختيار يوم مناسب",
+    leasechooseyouravalibletime:"برجاء اختيار وقت مناسب"
 
   },
   post:{

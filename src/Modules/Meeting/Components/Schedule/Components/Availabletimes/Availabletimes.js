@@ -3,22 +3,22 @@ import { useHistory } from "react-router-dom";
 import { Container, Row, Col, Alert } from "react-bootstrap";
 import { useSelector } from "react-redux";
 import "./Availabletimes.css";
-function Availabletimes({date}) {
+function Availabletimes({ date }) {
   const { currentLocal } = useSelector((state) => state.currentLocal);
   const history = useHistory();
   const [alert, setAlert] = useState(false);
   const [redirect, setRedirect] = useState(false);
   const [value, setValue] = useState("");
-    const [day, setDay] = useState("")
-  const [year, setYear] = useState("")
-  const [mon, setMon] = useState("")
-  const [bookingDate, setBookingDate] = useState("")
+  const [day, setDay] = useState("");
+  const [year, setYear] = useState("");
+  const [mon, setMon] = useState("");
+  const [bookingDate, setBookingDate] = useState("");
   useEffect(() => {
-    setDay(date.toString().slice(8,10))
-    setYear(date.toString().slice(11,16))
-    setMon(date.toString().slice(4,7))
-    setBookingDate(day +' , '+ mon+year)
-  }, [date,day,mon,year])
+    setDay(date.toString().slice(8, 10));
+    setYear(date.toString().slice(11, 16));
+    setMon(date.toString().slice(4, 7));
+    setBookingDate(day + " , " + mon + year);
+  }, [date, day, mon, year]);
   const chooseTime = (e) => {
     setValue(e.target.id);
   };
@@ -34,7 +34,7 @@ function Availabletimes({date}) {
         <div className="AvailabletimesConatiner">
           <Container fluid className="p-0">
             {alert && (
-              <Alert variant={"danger"}>Please choose your avalible time</Alert>
+              <Alert variant={"danger"}>{currentLocal.meeting.leasechooseyouravalibledate}</Alert>
             )}
             <Row>
               <Col md={6} xs={6}>
@@ -145,12 +145,22 @@ function Availabletimes({date}) {
           </Container>
         </div>
       </div>
-      <div className={currentLocal.language==="English"?"availableButton":"aravailableButton"}>
+      <div
+        className={
+          currentLocal.language === "English"
+            ? "availableButton"
+            : "aravailableButton"
+        }
+      >
         <button
           onClick={() => {
             if (value) {
-              setRedirect(true);
-              localStorage.setItem("bookingTime", value);
+              if (date) {
+                setRedirect(true);
+                localStorage.setItem("bookingTime", value);
+              } else {
+                setAlert(true);
+              }
             } else {
               setAlert(true);
             }

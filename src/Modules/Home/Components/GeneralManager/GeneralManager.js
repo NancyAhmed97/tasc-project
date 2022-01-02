@@ -13,7 +13,7 @@ function GeneralManager() {
       <Container fluid>
         
         <Row>
-          <Col md={6} xs={12} className="pt-5 mt-4">
+          <Col md={6} xs={12} className={currentLocal.language==="العربيه"?"arabic pt-5 mt-4":"pt-5 mt-4"} >
           <Title title={currentLocal.home.generalManager} />
 
             <ul className={currentLocal.language==="العربيه"&&"arGeneralManager"}>
