@@ -8,7 +8,7 @@ import img from "../../../Resources/Assets/Group 6026.png";
 import "./LoginForm.css";
 function LoginForm() {
   const [passSeenState, setPassSeenState] = useState("password");
-  const [userName, setUserName] = useState("");
+  const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
   const [rememberMe, setRememberMe] = useState("");
   const [alert, setAlert] = useState(false);
@@ -22,14 +22,14 @@ function LoginForm() {
   };
   const sendData = (e) => {
     e.preventDefault();
-    if (!userName || !pass) {
+    if (!email || !pass) {
       setAlert(true);
     } else {
       axios({
         method: "post",
         url: "http://localhost:8000/api/v1/login",
         data: {
-          name: userName,
+          email: email,
           password: pass,
           rememberMe: rememberMe,
         },
@@ -39,8 +39,8 @@ function LoginForm() {
     }
   };
   const getData = (e) => {
-    if (e.target.id === "userName") {
-      setUserName(e.target.value);
+    if (e.target.id === "email") {
+      setEmail(e.target.value);
     } else if (e.target.id === "password") {
       setPass(e.target.value);
     } else if (e.target.id === "Remember") {
@@ -73,11 +73,11 @@ function LoginForm() {
                       </Alert>
                     )}
                     </div>
-                  <label>{currentLocal.login.userName}</label>
+                  <label>{currentLocal.login.email}</label>
                   <input
-                    type="text "
+                    type="email "
                     className="w-100  input"
-                    id="userName"
+                    id="email"
                     onChange={getData}
                   />
                   <label>{currentLocal.login.password}</label>
